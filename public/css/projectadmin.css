@@ -1,0 +1,119 @@
+#bt {
+  margin: 4px;
+}
+
+.grid {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+}
+
+#card2 {
+  width: 1000px;
+  margin-bottom: 4px;
+  box-shadow: 0 3px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+#card2 .card-head {
+  position: relative;
+  height: 0px;
+}
+#card2 .card-head img {
+  width: 60px;
+  height: 60px;
+  border-radius: 70%;
+  position: relative;
+  float: left;
+  transform: translate(10px, 13px);
+}
+#card2 .card-head ul li {
+  text-decoration: none;
+  display: inline-block;
+  margin: 25px 0 0 30px;
+}
+#card2 .card-head .name {
+  font-size: 19px;
+  font-weight: 900;
+}
+#card2 .card-head .type {
+  font-size: 15px;
+  font-weight: 700;
+  color: #999;
+}
+#card2 .card-body {
+  text-align: center;
+  padding-bottom: 5px;
+}
+#card2 .card-body img {
+  width: 300px;
+  height: 350px;
+}
+#card2 .card-body .title {
+  font-size: 30px;
+  font-weight: 400;
+  margin: 30px 10px auto;
+}
+#card2 .card-foot {
+  display: block;
+  width: 94%;
+  border-top: 1px solid #000;
+  padding-top: 5px;
+  height: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#card2 .card-foot ul {
+  display: inline-block;
+}
+#card2 .card-foot ul li {
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 50px;
+  font-size: 21px;
+  font-weight: 900;
+}
+#card2 .card-foot .left {
+  float: right;
+}
+.ratting-wrapper {
+  direction: rtl;
+}
+.ratting-wrapper input {
+  display: none;
+}
+.ratting-wrapper label {
+  display: inline-block;
+  width: 16px;
+  position: relative;
+  cursor: pointer;
+}
+.ratting-wrapper label:before {
+  content: "\2606";
+  position: absolute;
+  font-size: 25px;
+  display: inline-block;
+  top: 0;
+  left: 0;
+}
+.ratting-wrapper label:after {
+  content: "\2605";
+  position: relative;
+  font-size: 25px;
+  display: inline-block;
+  top: 0;
+  left: 5px;
+  color: orange;
+  opacity: 0;
+}
+.ratting-wrapper label:hover:after,
+.ratting-wrapper label:hover ~ label:after,
+.ratting-wrapper input:checked ~ label:after {
+  opacity: 1;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+}

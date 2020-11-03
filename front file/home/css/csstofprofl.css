@@ -1,0 +1,172 @@
+
+  .custom-file input[type="file"]{
+  opacity: 0;
+  width: 104%;
+  height: 398%;
+  top: -263%;
+  cursor:pointer;
+  border-radius:50%;
+  border:1px solid black;
+  box-sizing:border-box;
+  overflow:hidden;
+  position:relative;
+  }
+
+
+
+.avatar{
+  width:fit-content;
+  position:relative;
+  margin-left: 60%;
+  margin-top: -25%;
+
+}
+
+.avatar-container{
+  cursor:pointer;
+  border-radius:50%;
+  border:#F2EEEE;
+  box-sizing:border-box;
+  overflow:hidden;
+  position:relative;
+}
+
+.avatar-image{
+  border-radius:50%;
+  height:100%;
+  width:auto;
+
+}
+.avatar-size{
+  width:10rem;
+  height:10rem;
+}
+.edit-container{
+opacity:1;
+transition:opacity 0.2s ease-in-out;
+background-color: #F2EEEE;
+bottom:0;
+height:100%;
+left: 0;
+position: absolute;
+right: 0;
+opacity:0.8;
+text-align:center;
+font-size:200%;
+border-color: red;
+
+
+}
+.avatar-container:hover .edit-container {
+  opacity:1;
+}
+
+.edit-container{
+opacity:1;
+transition:opacity 0.2s ease-in-out;
+background-color: #F2EEEE;
+bottom:0;
+height:100%;
+left: 0;
+position: absolute;
+right: 0;
+opacity:0.8;
+text-align:center;
+font-size:200%;
+}
+
+/* projet profile */
+
+
+  #blah2{
+    opacity: 1;
+    width: 10%;
+    height: 85%;
+    top: 2%;
+    margin-left: -12px;
+    cursor:pointer;
+    box-sizing:border-box;
+    overflow:hidden;
+    position:relative;
+  }
+
+  #titlprjt{
+    text-align: center;
+    font-size: 25px;
+
+
+  }
+
+
+  #prjtxt{
+  margin-top:-70px;
+  margin-left: 40px;
+  }
+
+  #prjtxt2{
+
+
+  color: #989898;
+
+  }
+
+#txtprjt{
+  text-align: center;
+
+  font-family: Arial, Helvetica, sans-serif;
+font-size: 13px;
+letter-spacing: 1px;
+word-spacing: 6px;
+color: #000000;
+font-weight: 100;
+}
+
+#JAIME{
+
+margin-top: -20PX;
+margin-bottom: 0px;
+
+}
+
+
+.rating a {
+   color: #aaa;
+   text-decoration: none;
+   font-size: 1em;
+   transition: color .4s;
+
+}
+.rating a:hover,
+.rating a:focus {
+   color: orange;
+   cursor: pointer;
+}
+.rating a:hover ~ a,
+.rating a:focus ~ a {
+   color: orange;
+}
+.rating a {
+   float: right;
+}
+
+
+
+.myButton {
+	background-color:transparent;
+	border-radius:17px;
+	display:inline-block;
+	cursor:pointer;
+	color:#050236;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:15px 11px;
+	text-decoration:none;
+}
+.myButton:hover {
+	background-color:transparent;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}

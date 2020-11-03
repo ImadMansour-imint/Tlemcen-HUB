@@ -1,0 +1,265 @@
+body {
+  background-attachment: fixed;
+  background-position: center;
+  background-color: #fff;
+}
+.search-box {
+  background-color: #cbcdc9;
+  height: 50px;
+  border-radius: 15px;
+  padding: 7px;
+  margin-right: auto;
+  width: 100%;
+}
+
+.search-btn {
+  color: black;
+  background-color: #cbcdc9;
+  float: right;
+  width: 40px;
+  height: 33px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 3px solid rgba(0, 0, 0, 0.9);
+}
+
+.search-btn .fa {
+  padding-left: 5px;
+  font-size: 23px;
+}
+
+.search-box a:hover .fa {
+  color: #4f91fc;
+  transition: 0.7s;
+}
+
+.search-txt {
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 22px;
+  line-height: 20px;
+  width: 70%;
+}
+
+ul li {
+  justify-content: center;
+  text-align: top;
+  display: block;
+  width: 100%;
+}
+
+ul li a {
+  padding: 10px 15px;
+  display: block;
+}
+
+ul li a .name {
+  position: relative;
+  height: 30px;
+  width: auto;
+  display: block;
+  overflow: hidden;
+}
+ul li a .name span {
+  display: block;
+  position: relative;
+  color: #fff;
+  font-size: 22px;
+  line-height: 28px;
+  transition: 0.4s;
+}
+
+ul li a .name span:before {
+  content: attr(data-text);
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: ;
+  height: 100%;
+  color: #4f91fc;
+}
+
+ul li a:hover .name span {
+  transform: translateY(30px);
+}
+
+nav img {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  color: white;
+  margin-right: 30px;
+  margin-left: 20px;
+  font-size: 35px;
+}
+
+.dropdown-menu .navbar-nav {
+  display: block;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+#dropdownMenuButton {
+  color: white;
+  font-size: 22px;
+}
+
+main {
+  padding: 20px;
+  padding-bottom: 0px;
+}
+
+img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h5,
+h3 {
+  color: #4f91fc;
+  font-weight: 250px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.box1,
+.box2 {
+  display: block;
+  padding: 20px;
+  padding-bottom: 0px;
+  border-radius: 30px;
+  border: 2px solid #4f91fc;
+  width: 400px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 20px;
+  margin-top: 3px;
+}
+
+.box3,
+.box5 {
+  display: block;
+  padding: 20px;
+  padding-bottom: 0px;
+  width: 400px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 10px;
+}
+
+.box4 {
+  display: block;
+  padding: 20px;
+  padding-bottom: 0px;
+  width: 400px;
+  height: 250px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 10px;
+  background-color: #efefef;
+}
+
+.P1 {
+  font-weight: 150px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+div.btn ul li {
+  display: inline;
+  list-style: none;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 20px;
+}
+
+div.btn ul li a {
+  width: 110px;
+}
+
+h1 {
+  color: #4f91fc;
+  font-weight: 250px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-align: top;
+}
+.p2 {
+  color: #4f91fc;
+  font-weight: 250px;
+  margin-top: 10px;
+  text-align: top;
+}
+
+#more {
+  display: none;
+}
+
+#read {
+  float: right;
+  width: 90px;
+  height: 33px;
+  margin-bottom: 40px;
+}
+
+.plus {
+  display: block;
+  float: right;
+  margin-top: 100px;
+  margin-left: 70px;
+  margin-right: 40px;
+}
+
+@media only screen and (max-width: 410px) {
+  .box1,
+  .box2 {
+    display: block;
+    padding: 20px;
+    padding-bottom: 0px;
+    border-radius: 30px;
+    border: 2px solid #4f91fc;
+    width: 200px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
+  }
+
+  .box3,
+  .box5 {
+    display: block;
+    padding: 20px;
+    padding-bottom: 0px;
+    width: 200px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 10px;
+  }
+
+  .box4 {
+    display: block;
+    padding: 20px;
+    padding-bottom: 0px;
+    width: 200px;
+    height: 250px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 10px;
+    background-color: #efefef;
+  }
+
+  #mgg {
+    width: 200px;
+  }
+  #mggg {
+    width: 150px;
+  }
+}
+
+.video-fluid {
+  width: 100%;
+  height: auto;
+}

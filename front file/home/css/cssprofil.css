@@ -1,0 +1,161 @@
+
+
+/* hdo tae page profil */
+
+body{background-color: #E9EBEE;}
+
+
+#avatar-profil{
+right: 57%;
+top:80px;
+opacity: 1;
+
+}
+/* bch jbedt les pubs hdok  */
+#pub11{
+  padding: 0%;
+}
+
+/* tof sghir hdik tae skils  */
+
+#TOFSKILLS{
+  width:25%;
+
+
+}
+#imgcvrt{
+
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-top: -20px;
+
+}
+
+/* bsh drt liste bla n9ati */
+  ol.v {list-style-type: none;}
+
+  #nike{
+  color: #707070;
+  size:5px;
+  }
+
+  /* hdi tof cam f nos tof de profil */
+
+   .fa-camera{
+     color: black;
+     margin-top: 40%
+  }
+
+  /* hdi tae tof li tjibha m pc taek tof de profil bah tji f dwyra */
+
+  #blah{
+    opacity: 1;
+    width: 113%;
+    height: 418%;
+    top: 2%;
+    cursor:pointer;
+    border-radius:50%;
+    border:1px solid black;
+    box-sizing:border-box;
+    overflow:hidden;
+    position:relative;
+  }
+
+
+
+
+
+
+/* hdo tae 3 points hdok  */
+
+
+  .icons li {
+      background: #050236;
+      height: 7px;
+      width: 7px;
+      line-height: 0;
+      list-style: none outside none;
+      margin-right: 5px;
+      margin-top: 3px;
+     vertical-align: top;
+      border-radius:50%;
+      pointer-events: none;
+      float: left;
+
+
+
+  }
+
+  .btn-left {
+      left: 0.4em;
+  }
+
+  .btn-right {
+      right: 0.4em;
+  }
+
+  .btn-left, .btn-right {
+
+      top: 0.24em;
+
+  }
+
+                 .dropbtn {
+                   top:40%;
+                   right: 29%;
+                   position: none;
+
+                     color: white;
+                     font-size: 16px;
+                     border: none;
+                     cursor: pointer;
+                     float: left;
+                     display: inline-block;
+
+                 }
+
+
+      .dropdown {
+        position: absolute;
+        display: block;
+        right: 0.4em;
+      }
+
+      .dropdown-content {
+          display:none ;
+          position: relative;
+          margin-top: 30px;
+          background-color: #f9f9f9;
+          min-width: 160px;
+          overflow: auto;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+      }
+
+      .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+      }
+
+      .dropdown a:hover {background-color: #f1f1f1}
+
+      .show {display:block;
+      }
+
+      /* bah jbt les pubs hdok chuia  */
+
+      #pubbb{
+        margin-left: 25px;
+      }
+      /*style tae form tae coordonnees   */
+
+
+    #form01{
+      width:50%;
+      height:60%;
+
+      top:-3%;
+
+    }

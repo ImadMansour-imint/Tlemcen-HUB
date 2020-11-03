@@ -1,0 +1,700 @@
+
+
+#barre{
+margin-left: 35px;
+
+}
+
+#aedit{
+  width: 15%;
+  height: 100%;
+}
+
+#link{
+  margin-left: 10%;
+
+}
+#cam{
+  margin: auto;
+}
+
+
+
+
+img {
+  max-width: 100%; }
+
+
+  .content {
+    float: left;
+    padding: 1.875em;
+    margin-bottom: 60px;
+    width: 100%; }
+
+      .card {
+        margin-bottom: 1.875em;
+        border-radius: 5px;
+        padding: 0;
+
+
+        }
+
+
+
+        /* css coordonee */
+
+        /* hda tae coordonees taille tae form */
+
+        #form01{
+          width:50%;
+          height:60%;
+
+          top:-3%;
+
+        }
+        /*  */
+
+
+
+        #btnmm{margin-left: 500px;
+          margin-top: -10%;
+          border-radius: 109px 109px 109px 109px;
+        -moz-border-radius: 109px 109px 109px 109px;
+        -webkit-border-radius: 109px 109px 109px 109px;
+        border: 0px solid #000000;
+        }
+
+        .custom-file input[type="file"]{
+        opacity: 0;
+        width: 104%;
+        height: 398%;
+        top: -263%;
+        cursor:pointer;
+        border-radius:50%;
+        border:1px solid black;
+        box-sizing:border-box;
+        overflow:hidden;
+        position:relative;
+        }
+
+        .changetof input[type="file"]{
+          opacity: 0;
+        }
+
+
+   .rating a {
+      color: #aaa;
+      text-decoration: none;
+      font-size: 1em;
+      transition: color .4s;
+
+   }
+   .rating a:hover,
+   .rating a:focus {
+      color: orange;
+      cursor: pointer;
+   }
+   .rating a:hover ~ a,
+   .rating a:focus ~ a {
+      color: orange;
+   }
+   .rating a {
+      float: right;
+   }
+
+
+
+   .myButton {
+     background-color:transparent;
+     border-radius:17px;
+     display:inline-block;
+     cursor:pointer;
+     color:#050236;
+     font-family:Arial;
+     font-size:15px;
+     font-weight:bold;
+     padding:15px 11px;
+     text-decoration:none;
+   }
+   .myButton:hover {
+     background-color:transparent;
+   }
+   .myButton:active {
+     position:relative;
+     top:1px;
+   }
+   /* css tof de profil end*/
+
+
+
+
+
+
+/* hdo tae page profil */
+
+body{background-color: #E9EBEE;}
+
+
+#avatar-profil{
+right: 57%;
+top:80px;
+opacity: 1;
+
+}
+/* bch jbedt les pubs hdok  */
+#pub11{
+  padding: 0%;
+}
+
+/* tof sghir hdik tae skils  */
+
+#TOFSKILLS{
+  width:25%;
+
+
+}
+#imgcvrt{
+
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-top: -20px;
+
+}
+
+/* bsh drt liste bla n9ati */
+  ol.v {list-style-type: none;}
+
+  #nike{
+  color: #707070;
+  size:5px;
+  }
+
+  /* hdi tof cam f nos tof de profil */
+
+   .fa-camera{
+     color: black;
+     margin-top: 40%
+  }
+
+  /* hdi tae tof li tjibha m pc taek tof de profil bah tji f dwyra */
+
+
+
+
+
+
+
+/* hdo tae 3 points hdok  */
+
+
+
+  .btn-left {
+      left: 0.4em;
+  }
+
+  .btn-right {
+      right: 0.4em;
+  }
+
+  .btn-left, .btn-right {
+
+      top: 0.24em;
+
+  }
+
+                 .dropbtn {
+                   top:40%;
+                   right: 29%;
+                   position: none;
+
+                     color: white;
+                     font-size: 16px;
+                     border: none;
+                     cursor: pointer;
+                     float: left;
+                     display: inline-block;
+
+                 }
+
+
+      .dropdown {
+        position: absolute;
+        display: block;
+        right: 0.4em;
+      }
+
+      .dropdown-content {
+          display:none ;
+          position: relative;
+          margin-top: 30px;
+          background-color: #f9f9f9;
+          min-width: 160px;
+          overflow: auto;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+      }
+
+      .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+      }
+
+      .dropdown a:hover {background-color: #f1f1f1}
+
+      .show {display:block;
+      }
+
+      /* bah jbt les pubs hdok chuia  */
+
+      #pubbb{
+        right: 0%;
+      }
+      /*style tae form tae coordonnees   */
+
+
+    #form01{
+      width:50%;
+      height:60%;
+
+      top:-3%;
+
+    }
+
+    #addtof{
+      right: -8%;
+    }
+
+    .box{
+      box-shadow: 1px 1px #c5c5c5;
+      border-radius: 3px;
+      border-color:  #E9EBEE;
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    textarea {
+      outline: none;
+    }
+
+::placeholder {
+  color: #01031D;
+  font-size: 1.2em;
+  padding-left: 20px;
+  font-weight: Semilight Italic;
+}
+
+textarea { font-size: 1.6em; }
+
+
+
+.avatar2{border-radius: 50%
+  width:300px ;
+  height: 300px;
+  background-image: url("img/image2.jpg");
+  background-size: cover;
+
+}
+
+
+.avatar2{
+  width:fit-content;
+  position:relative;
+  margin-top: -35%;
+  margin-left: 58%;
+
+}
+
+.avatar-container2{
+  cursor:pointer;
+
+  border:#F2EEEE;
+  box-sizing:border-box;
+  overflow:hidden;
+  position:relative;
+}
+
+.avatar-image2{
+
+  height:100%;
+  width:auto;
+}
+.avatar-size2{
+  width:12rem;
+  right: 30%;
+  height:12rem;
+}
+#avatar-profil2{
+right: 57%;
+top:80px;
+
+}
+#blah2{
+  opacity: 1;
+  width: 109%;
+  height: 500%;
+  top: -190%;
+  cursor:pointer;
+
+  overflow:hidden;
+  position:relative;
+  max-height: 195px;
+  max-width: 194px;
+}
+
+.edit-container{
+opacity:1;
+transition:opacity 0.2s ease-in-out;
+background-color: #F2EEEE;
+bottom:0;
+height:100%;
+left: 0;
+position: absolute;
+right: 0;
+opacity:0.8;
+text-align:center;
+font-size:200%;
+border-color: red;
+}
+.avatar-container2:hover .edit-container{
+  opacity:0.5;
+}
+
+
+.dropdown{
+
+  left: 2%;
+
+}
+.infos{
+  margin: 30px;
+  margin-left: 25px;
+  display: inline-block;
+}
+.descrip{
+  height: 500px;
+  width: 500px;
+  box-shadow: 2px 2px 2px 2px #c5c5c5;
+  border-radius: 3px;
+  border-color:  #E9EBEE;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.post{
+  float: right;
+  width: 140px;
+  height: 45px;
+  color: white;
+  background-color: #3ED156;
+  border-radius: 5px;
+  border-color: #3ED156;
+
+}
+.project_type {
+  padding-right: 20px;
+}
+.box{
+  box-shadow: 1px 1px #c5c5c5;
+  border-radius: 3px;
+  border-color:  #E9EBEE;
+
+}
+.add{
+  float: right;
+  padding-left: 50px;
+  position: relative;
+  width: 300px;
+}
+.pictures{
+  float: right;
+  margin-top: 20px;
+  width: 20%;
+  margin-left: 20px;
+}
+.img1 ,.img2 ,.img3{
+  margin-bottom: 30px;
+  border-radius: 7px;
+  box-shadow: 3px 3px grey;
+}
+
+
+.thumbnail{
+
+    height: 100px;
+    margin: 10px;
+}
+.add_img{
+  width: 325px;
+  height: 260px;
+  overflow: auto;
+  border-color: grey solid;
+  border-radius: 15px;
+  margin-bottom: 50px;
+}
+
+.infos{
+  margin: 30px;
+  margin-left: 25px;
+  display: inline-block;
+}
+.descrip{
+  height: 500px;
+  width: 500px;
+  box-shadow: 2px 2px 2px 2px #c5c5c5;
+  border-radius: 3px;
+  border-color:  #E9EBEE;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.post{
+  float: right;
+  width: 140px;
+  height: 45px;
+  color: white;
+  background-color: #3ED156;
+  border-radius: 5px;
+  border-color: #3ED156;
+
+}
+.project_type {
+  padding-right: 20px;
+}
+.box{
+  box-shadow: 1px 1px #c5c5c5;
+  border-radius: 3px;
+  border-color:  #E9EBEE;
+
+}
+.add{
+  float: right;
+  padding-left: 50px;
+  position: relative;
+  width: 300px;
+}
+.pictures{
+  float: right;
+  margin-top: 20px;
+  width: 20%;
+  margin-left: 20px;
+}
+.img1 ,.img2 ,.img3{
+  margin-bottom: 30px;
+  border-radius: 7px;
+  box-shadow: 3px 3px grey;
+}
+
+
+.thumbnail{
+
+    height: 100px;
+    margin: 10px;
+}
+.add_img{
+  width: 325px;
+  height: 260px;
+  overflow: auto;
+  border-color: grey solid;
+  border-radius: 15px;
+  margin-bottom: 50px;
+}
+
+
+
+.s-clearfix {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .mb10 {
+            margin-bottom: 10px;
+        }
+
+        .ml5 {
+            margin-left: 5px;
+        }
+
+        .mt4 {
+            margin-top: 4px;
+        }
+
+        .border-box {
+            box-sizing: border-box;
+        }
+
+        .igui-filter-f-left {
+            float: left;
+        }
+
+        .igui-filter-f-right {
+            float: right;
+        }
+
+        .igui-filter-checkbox label {
+            cursor: pointer;
+        }
+
+
+.add_file{
+  width: 330px;
+  height: 300px;
+  right: 30%;
+  overflow: auto;
+  position: absolute;
+  border-radius: 10px;
+
+}
+.code{
+}
+#imgadd{
+  left: 10%;
+}
+
+
+
+#igUpload2{}
+
+
+
+  #vdw{
+    position: absolute;
+    margin-left: -30px;;
+  
+  }
+
+
+
+ @media only screen and (max-width:   991px) {
+
+   #vdw{
+      position: absolute;
+      right: 400px;
+      top: 0px;
+    }
+
+#btnpost{
+  margin: 0px;
+  top:95px;
+}
+
+#ccrd{
+  margin: 0px;
+  width: 648px;
+}
+
+   #prjttyp{
+
+   }
+
+   #prjttitle{
+     top:48px;
+     position: absolute;
+
+   }
+
+   #btnpost{
+
+     left: 0px;
+     top: 0px;
+
+   }
+
+   hr{
+      display: none;
+   }
+
+   textarea{
+     width: 150%;
+     height: 42%;
+     margin-top: 60px;
+
+   }
+       textarea {
+         outline: none;
+       }
+
+   ::placeholder {
+     color: #01031D;
+     font-size: 1.5em;
+     padding-left: 20px;
+     font-weight: Semilight Italic;
+   }
+
+   textarea { font-size: 0.6em; }
+
+   .avatar-size2{
+     width:8rem;
+     right: 52%;
+     top: 137px;
+     height:6rem;
+   }
+
+  .border-box{
+    width: 10px;
+  }
+  .add_file{
+    width: 130px;
+    height: 106px;
+    top: -17px;
+    right: 130%;
+  }
+  #addtof{
+
+    left: -5%;
+  }
+
+
+  #pubbb{
+    right: 0%;
+    width: 40%;
+    display: none;
+
+
+  }
+
+ }
+
+
+
+ @media only screen and (max-width:   570px) {
+   #btnpost{
+
+      left: 147px;
+      top: 0px;
+
+    }
+
+
+ }
+
+
+
+  @media only screen and (max-width:   400px) {
+  #addtof{
+    left:4%;
+  }
+
+     #vdw{
+       position: absolute;
+       right: 80px;
+       top: 0px;
+     }
+  }

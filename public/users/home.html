@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap 4 link -->
+    <link rel="stylesheet" href="./vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+    <!-- Ubuntu font -->
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+    
+    <title>Document</title>
+</head>
+<body>
+<div></div>
+    <header>
+            <div class="container">
+                <!-- navbar  -->
+                <div class="navbar navbar-expand-md">
+                    <div class="navbar-brand">logoHere</div>
+        
+                    <!-- togglerButton -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="smallDevice">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+        
+                    <!-- navbarButtons -->
+                    <div class="collapse navbar-collapse  justify-content-end" id="smallDevice">
+                        <ul class="navbar-nav">
+                            <li class="nad-item ">
+                                <a class="btn btn-light text-primary " 
+                                    style="border-radius: 20px;" 
+                                    data-toggle="modal" 
+                                    data-target="#login">Log In</a>
+                            </li>
+                            <li class="nad-item ml-2">
+                                <a class="btn btn-light bordred border-primary text-primary "
+                                    data-toggle="modal" 
+                                    data-target="#signin">Sign Up</a>
+                            </li>
+            
+                        </ul>
+                    </div>
+            
+            
+            
+                </div>
+            </div>
+            
+    </header>
+
+    
+    
+
+    <main>
+            <div class="container mt-5">
+                <div class="row mt-4">
+                    <div class="col-md-6 marginTop">
+                        <h2>Share you problems ,</h2>
+                        <h2>your projects .</h2>
+                        <h2>Hey you can invest too ! </h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore soluta animi sit doloribus adipisci similique expedita eligendi tempore dicta iusto quam accusamus sapiente in ipsa esse tenetur libero, fuga architecto.</p>
+                        <button class="w-600 btn btn-primary bordred size" 
+                                data-toggle="modal"
+                                data-target="#seeMore">See more</button>
+                    </div>
+
+                    {{--  SVG picture  --}}
+                    <div class="col-md-6 mt-5">
+                        <img class="w-100" src="./imgs/home.svg" alt="esiHub" >
+                    </div>
+                </div>
+            </div>
+    </main>
+    
+</body>
+<!-- Bootstarp jQuery Script -->
+<script  src="./vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- jQuery  -->
+<script src="/node_modules/jquery/dist/jquery.min.js"></script>
+</html>

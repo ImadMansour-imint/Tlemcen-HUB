@@ -1,0 +1,125 @@
+.card{
+	max-width: 500px;
+	box-shadow: 0 3px 30px rgba(0,0,0,0.3);
+	margin: auto;
+	margin-top: 4%;
+	letter-spacing: 0.5;
+	font-family: sans-serif;
+}
+img{
+	width: 100%;
+	height: 30px;
+	border-radius:50%; 
+}
+.msg-header{
+	border-bottom: 1px solid #000;
+	padding-bottom: 5px;
+	width: 100%
+	height:10;
+	display: inline-block;
+}
+.nbr-likes{
+	width: 120px;
+	float: left;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+.nbr-likes .fa{
+	cursor: pointer;
+	margin: 5px;
+}
+.nbr-likes .fa-thumbs-up{
+	color: #007bff;
+}
+.nbr-likes h4{
+	font-weight: bold;
+}
+.like{
+	width: 30px;
+	float: right;
+	margin-top: 10px;
+	margin-right:10px;
+}
+.chat-page{
+	padding: 0 0 10px 0;
+}
+.msg-inbox{
+	border: 1px solid #ccc;
+	overflow: hidden;
+	padding-bottom:30px;
+}
+.chats{
+	padding: 30px 15px 0 25px;
+}
+.msg-page{
+	height: 400px;
+	overflow-y:auto;
+}
+.received-chats-img{
+	display: inline-block;
+	width: 30px;
+	float: left;
+	padding: 20px 0 0 0;
+
+}
+.received-msg{
+	display: inline-block;
+	vertical-align: top;
+	padding: 20px 0 0 10px;
+	width: 92%;
+}
+.received-msg-inbox{
+	width: 80%;
+}
+.received-msg-inbox p{
+	background: #efefef none repeat scroll 0 0;
+	border-radius: 10px;
+	color:#646464;
+	font-size: 14px;
+	margin: 0;
+	padding: 5px 10px 5px 12px;
+	width: 100%;
+}
+.time{
+	color: #777;
+	display: block;
+	font-size: 12px;
+	margin: 8px 0 0;
+}
+.msg-bottom{
+	position:relative;
+	background-color:#007bff;
+}
+.input-group{
+	float: right;
+	margin-top: 13px;
+	margin-right: 20px;
+	outline: none !important;
+	border-radius: 20px;
+	width: 90% !important;
+	background-color:#efefef;
+}
+.form-control{
+	border: none !important;
+	border-radius: 20px !important;
+	background-color:#efefef;
+}
+.input-group-text{
+	background: transparent !important;
+	border: none !important;
+}
+.input-group .fa{
+    color: #007bff;
+    float: right;
+}
+.form-control:focus{
+	border-color: none !important;
+	box-shadow: none !important;
+	border-radius: 20px;
+	background-color: #efefef;
+}
+
+
+
+
+

@@ -1,0 +1,46 @@
+  body{
+      background-color:#BDBDBD;
+      margin-top: 2%;
+      margin-bottom: 4%;
+
+
+    }
+  #bbord{-webkit-border-radius: 31px 31px 31px 31px;
+-moz-border-radius: 31px 31px 31px 31px;
+border-radius: 31px 31px 31px 31px;
+
+
+}
+
+
+
+#immg1{
+  height:90%;
+   width:90%;
+}
+#immg2{
+  height:100%;
+   width:110%;
+}
+#immg3{
+  height:100%;
+   width:80%;
+}
+
+.w-600{margin-top:  5px;
+       margin-bottom: 5px;
+     margin-left: 40px}
+
+p,h2{margin-left:  40px ;}
+   .btn-light{background: #FFFFFF}
+
+   #roww{margin-left: 40px}
+   .tof{margin-left: 60px;}
+
+   #ttop{margin-top: 0px;}
+   #txtc{margin-left: 37%;
+   margin-top: 20px;}
+
+
+
+

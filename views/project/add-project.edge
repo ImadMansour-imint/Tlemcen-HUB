@@ -1,0 +1,289 @@
+
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<head>
+
+ <!-- les link tae Uploadfile -->
+
+<script src="https://igniteui.com/js/modernizr.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+<script src="https://cdn-na.infragistics.com/igniteui/latest/js/infragistics.core.js"></script>
+<script src="https://cdn-na.infragistics.com/igniteui/latest/js/infragistics.lob.js"></script>
+<link href="https://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
+<link href="https://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{pageTitle}} </title>
+    <meta name="description" content="Ela Admin - HTML5 Admin Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/addprojet.css">
+    <link rel="stylesheet" type="text/css" href="/css/nav.css">
+
+
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
+
+
+</head>
+
+<body>
+@include('includes.nav')
+<!-- hna nstf les cards hdok  -->
+
+@if(errorMessage)
+<div class="user-message user-message--error">{{errorMessage}}</div>
+@endif
+<div class="content">
+
+  <div class="row">
+    <div class="col-lg-10">
+      <div class="row-lg">
+
+
+        <div class="card">
+          </br>
+<form action="/add-project" method="POST" enctype="multipart/form-data">
+<!-- dropdown type projet -->
+    <div id="barre" class="row">
+      <div class="col-sm-8">  <div class="dropdown">
+        <div class="row">
+
+          <div id="prjttyp" class="col-4">
+            <span class="project_type">
+              <select class="box" name="projectType" style="height: 40px; width: 150px;" >
+              @if(errorMessage)
+              <option  value="" disabled selected >{{project.projectType}}</option>
+              @else
+              <option  value="" disabled selected >Project Type</option>
+              @endif
+               <option value="Web"t>Web</option>
+               <option value="mobile">mobile</option>
+               <option value="Desktop">Desktop</option>
+               <option value="Arduino">Arduino</option>
+               <option value="Graphic design">Graphic design</option>
+               <option value="Motion graphics">Motion graphics</option>
+               <option value="Others">Others ...</option>
+             </select>
+            </span>
+          </div>
+
+          <div id="prjttitle" class="col-4">
+  <!-- title projet -->
+            <span class="titre">
+            @if(errorMessage)
+            <input class="box" type="text"  style="height: 40px;width: 150px;" name="title" value="{{project.title}}">
+            @else
+            <input class="box" type="text" placeholder="Project title" style="height: 40px;width: 150px;" name="title">
+            @endif
+            </span>
+          </div>
+
+    </div>
+
+                          </div>
+     </div>
+
+     <!-- boutton post -->
+    <div id="btnpost" class="col-4">  <button type="submit" class="btn btn-xs btn-success "><strong>&nbsp;&nbsp;&nbsp;&nbsp;post&nbsp;&nbsp;&nbsp;&nbsp;</strong></button></div>
+
+  </div>
+
+
+
+
+
+        <hr width="95%"  color="#707070"  align="center" ></hr>
+
+      <div class="card-body">
+        <div class="content">
+          <div class="row">
+            <div class="col-8">
+
+        <!-- description -->
+                @if(errorMessage)
+                <textarea  cols="40" rows="10" name="description">{{project.description}}</textarea>
+                @else
+                <textarea placeholder="Descripe your Project here ..." cols="40" rows="10" name="description"></textarea>
+                @endif
+            </div>
+
+            <!-- add tof -->
+
+
+        <div id="addtof" class="col-4">
+                <div id="addtof" class="row">
+                      <div id="imgadd"  class="card-body">
+                        <div class="avatar-container2 avatar-size2 ">
+                          <div id="hnatatht"></div>
+                            <div class="edit-container">
+                              <div class="custom-file">
+                              <i id="cam" class="fas fa-camera"></i>
+                              <img id="blah2" src="#" alt="" />
+                              <input type="file" id="imgInp" name="image">
+                              <i href="#" class=''></i>
+                              </div>
+
+                            </div>
+                        </div>
+
+                      </div>
+                </div>
+
+<!-- add file -->
+
+  <div id="vdw" class="row">
+        <div id="imgadd"  class="card-body">
+          <div class="avatar-container2 avatar-size2 ">
+            <div id="hnatatht"></div>
+              <div class="edit-container">
+                <div class="custom-file">
+                <i id="cam" class="fa fa-video-camera"></i>
+                <img id="blah2" src="#" alt="" />
+                <input type="file" id="imgInp" name="video">
+                <i href="#" class=''></i>
+                </div>
+
+              </div>
+          </div>
+
+        </div>
+  </div>
+
+
+      </div>
+    </div>
+</div>
+</div>
+
+</form>
+</div>
+</div></div>
+
+<!-- cote droit li fih hdok tae mlh w hack day  -->
+
+    <div id="pubbb" class="col-lg-2">
+
+
+       <div class="row">
+         <div class="card">
+             <div id="pub11"  class="card-body">
+                 <img   src="/img/93052335_323808895254557_548217610005643264_n.jpg" alt="">
+
+             </div>
+         </div>
+       </div>
+
+       <div class="row">
+         <div class="card">
+             <div id="pub11" class="card-body">
+               <img   src="/img/92738417_500278707517027_9190470847905660928_n.jpg" alt="">
+
+             </div>
+         </div>
+       </div>
+       <div class="row">
+         <div class="card">
+             <div id="pub11" class="card-body">
+               <img   src="/img/92728715_247387743066197_1109854106593263616_n.jpg" alt="">
+
+             </div>
+         </div>
+       </div>
+       <div class="row">
+         <div class="card">
+             <div id="pub11" class="card-body">
+                  <img   src="/img/92226362_698728877620545_3772096491326275584_n.jpg" alt="">
+
+             </div>
+         </div>
+       </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<script >
+
+// hna tae timporter tof
+
+function readURL(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+
+    reader.onload = function(e) {
+      $('#blah2').attr('src', e.target.result);
+    }
+
+    reader.readAsDataURL(input.files[0]); // convert to base64 string
+  }
+}
+
+$("#imgInp").change(function() {
+  readURL(this);
+});
+
+
+function changeLanguage(language) {
+    var element = document.getElementById("url");
+    element.value = language;
+    element.innerHTML = language;
+}
+
+
+
+//script tae timporter file
+
+$(function () {
+          var buttonLabel = $.ig.Upload.locale.labelUploadButton;
+          if (Modernizr.input.multiple) {
+              buttonLabel = "Drag and Drop Files Here <br/> or Click to Select From a Dialog";
+          }
+          $("#igUpload2").igUpload({
+              mode: 'multiple',
+              name: 'projectFiles',
+              multipleFiles: true,
+              maxUploadedFiles: 10,
+              maxSimultaneousFilesUploads: 2,
+              progressUrl: "https://igniteui.com/IGUploadStatusHandler.ashx",
+              controlId: "serverID1",
+              labelUploadButton: buttonLabel,
+              onError: function (e, args) {
+                  showAlert(args);
+              }
+          });
+          if (Modernizr.input.multiple) {
+              $("div.add_file .ui-igstartupbrowsebutton").attr("style", "width: 250px; height: 180px; border-radius: 7px;background-size:cover; background-image:url(./img/code.jpg)");
+
+          }
+          $("#useSingleRequestCheck").igCheckboxEditor({
+              checked: false,
+              valueChanged: function (evt, ui) {
+                  $("#igUpload2").igUpload("option", "useSingleRequest", ui.newState);
+              }
+          });
+      });
+
+      function showAlert(args) {
+          $("#error-message").html(args.errorMessage).stop(true, true).fadeIn(500).delay(3000).fadeOut(500);
+      }
+
+
+
+
+
+</script>
+
+
+
+</body>

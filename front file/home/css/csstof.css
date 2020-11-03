@@ -1,0 +1,62 @@
+
+  .custom-file input[type="file"]{
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  top: 10%;
+  }
+
+
+
+.avatar{
+  width:fit-content;
+  position:relative;
+  margin-left: 60%;
+  margin-top: -25%;
+
+}
+
+.avatar-container{
+  cursor:pointer;
+  border-radius:50%;
+  border:1px solid black;
+  box-sizing:border-box;
+  overflow:hidden;
+  position:relative;
+}
+
+.avatar-image{
+  border-radius:50%;
+  height:100%;
+  width:auto;
+}
+.avatar-size{
+  width:10rem;
+  height:10rem;
+}
+.edit-container{
+opacity:0;
+transition:opacity 0.2s ease-in-out;
+background-color: rgba(32, 33, 36 , 0.6);
+bottom:0;
+height:33%;
+left: 0;
+position: absolute;
+right: 0;
+opacity:0;
+text-align:center;
+font-size:200%;
+
+
+}
+.avatar-container:hover .edit-container {
+  opacity:1;
+}
+
+#hnatatht{
+  border-radius:50%;
+  height:100%;
+  width:auto;
+
+}

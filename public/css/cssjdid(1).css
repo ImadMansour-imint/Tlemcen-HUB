@@ -1,0 +1,519 @@
+
+body {
+    font-family: Ubuntu, "times new roman", times, roman, serif;
+}
+
+.size{
+    font-size: larger;
+}
+
+.bordred{
+    border : 2px solid ;
+    border-radius: 20px;
+
+
+}
+
+.marginTop{
+    margin-top: 100px;
+}
+
+#spanm4{
+
+margin-left: 70%;
+margin-top: -7%
+
+}
+#spanm6{
+
+margin-left: 53%;
+
+
+}
+#spanm5{
+
+margin-left: 14%;
+margin-top: -4%
+
+}
+/*hnaya tae avatar (page2 tae inscription)*/
+.avatar{border-radius: 50%
+  width:300px ;
+  height: 300px;
+  background-image: url("img/image2.jpg");
+  background-size: cover;
+
+}
+
+#wrappere{
+margin: 0 auto;
+width: 100%;
+text-align: center;
+position: absolute;
+top: 80px;
+
+}
+
+.arrow-up{width: 0;
+height:0;
+position: absolute;
+border-left: 23px solid transparent;
+border-right: 23px solid transparent;
+border-bottom:30px solid #fff;
+right: 80px;
+top :-25px;
+
+}
+
+#colortyping2{
+  border: none;
+  margin-left: -115px;
+  margin-top: 30px;
+  padding-left: 5%;
+  width: 42%;
+  border-bottom: 1px solid #2699FB;
+  color: #2699FB;
+
+}
+#tofsgh5{
+  margin-left: -90%;
+  margin-top: 0%;
+  padding-bottom: : 5%;
+  color:  #007FEB
+
+}#tofsgh6{
+  margin-left: -53%;
+  margin-top: -5%;
+  padding-bottom: : 5%;
+  color:  #007FEB
+
+}
+
+#colortyping5{
+  border: none;
+  margin-left: 0%;
+  margin-top: 5px;
+  padding-left: 5%;
+  padding-top: 3%;
+  width: 22%;
+  border-bottom: 1px solid #2699FB;
+
+  text-decoration-color: color: #BCE0FD;
+
+
+}
+
+
+#habat{width: 42%;
+padding: 12px 20px;
+margin: 8px 26px;
+color: #2699FB;
+display: inline-block;
+border:none;
+border-bottom: 1px solid #2699FB;
+outline: none;
+background: transparent;
+box-sizing: border-box;
+font-size:16px;}
+
+select{  border: transparent;
+ -webkit-border-radius: 4px;
+ -moz-border-radius: 4px;
+ border-radius: 4px;
+
+ }
+
+#colortyping1{width: 70%;
+font-size: 16px;
+padding-top: 6%;
+
+}
+
+ #modal-wrapper3{
+
+   width: 42%;
+   height: 50%;
+   margin-top: 9%;
+   margin-left: 50%;
+   padding: 0px;
+
+
+ }
+ span{color:#2699FB ;}
+
+#btnn2{margin-left: 23%;
+  margin-top: 4%;
+margin-bottom: -15%;
+padding: 0%;
+border-radius: 3px 3px 3px 3px;
+-moz-border-radius: 3px 3px 3px 3px;
+-webkit-border-radius: 3px 3px 3px 3px;
+border: 0px solid #000000;
+}
+
+ #margininss{
+   margin-left: 10%;
+
+   text-decoration-color:#2699FB ;
+   margin-top: 5%;
+
+ }
+
+
+
+ #tofsghh{margin-left: -103%;
+ margin-top: -7%;
+ padding-bottom: : 5%;
+
+}
+#spann{
+margin-left: 65%;
+
+}
+
+
+
+/* Full-width input fields */
+
+
+input[type=text], input[type=password],input[type=date],input[type=tel] {
+    width: 42%;
+    padding: 10px 20px;
+    margin: 8px 26px;
+    color: #2699FB;
+    display: inline-block;
+    border:none;
+    border-bottom: 1px solid #2699FB;
+    outline: none;
+    background: transparent;
+    box-sizing: border-box;
+  font-size:16px;
+}
+
+::placeholder {
+color: #BCE0FD;
+
+}
+input:focus::-webkit-input-placeholder {
+color: #BCE0FD;
+}
+
+
+/* Set a style for all buttons */
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+
+/* The Modal (background) */
+
+
+.modal{
+  display:none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+
+}
+
+/* Modal Content Box */
+.modal-content {
+  border-radius: 14px 14px 14px 14px;
+-moz-border-radius: 14px 14px 14px 14px;
+-webkit-border-radius: 14px 14px 14px 14px;
+border: 0px solid #000000;
+    background-color: #fefefe;
+    margin: 4% auto 15% auto;
+    margin-top: 70px;
+    border: 1px solid #888;
+    width: 70%;
+    height: 75%;
+  padding-bottom: 30px;
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+.close:hover,.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    animation: zoom 0.6s
+}
+@keyframes zoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+#btnmm{margin-left: 500px;
+  margin-top: -10%;
+  border-radius: 109px 109px 109px 109px;
+-moz-border-radius: 109px 109px 109px 109px;
+-webkit-border-radius: 109px 109px 109px 109px;
+border: 0px solid #000000;
+}
+
+#marginins{
+  margin-left: 10%;
+
+  text-decoration-color:#2699FB ;
+  margin-top: 10%;
+
+}
+
+
+
+#tofsgh{margin-left: -103%;
+margin-top: -2.5%;
+padding-bottom: : 5%;
+
+
+}
+#tofsgh1{color: #2699FB;
+}
+
+
+
+
+
+
+
+body{
+  background-color:#BDBDBD;
+  margin-top: 2%;
+  margin-bottom: 4%;
+
+
+}
+#bbord{-webkit-border-radius: 31px 31px 31px 31px;
+-moz-border-radius: 31px 31px 31px 31px;
+border-radius: 31px 31px 31px 31px;
+
+
+}
+
+
+
+#immg1{
+height:90%;
+width:90%;
+}
+#immg2{
+height:100%;
+width:110%;
+}
+#immg3{
+height:100%;
+width:80%;
+}
+
+.w-600{margin-top:  5px;
+   margin-bottom: 5px;
+ margin-left: 40px}
+
+p,h2{margin-left:  40px ;}
+.btn-light{background: #FFFFFF}
+
+#roww{margin-left: 40px}
+.tof{margin-left: 60px;}
+
+#ttop{margin-top: 0px;}
+#txtc{margin-left: 37%;
+margin-top: 20px;}
+
+
+
+
+
+
+
+
+
+
+.pp{color:#2699FB}
+.hh{color:#2699FB}
+.titre1{
+
+  text-align: justify;
+  margin-left: : : 10px;
+
+}
+
+
+.titre{
+  color: #007FEB;
+  position:absolute ;
+  background: ##FFFFFF;
+  bottom:0px;
+  text-align: center;
+
+
+
+
+}
+
+img{
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+   border-radius: 8px;
+
+   max-height: 100px;
+ max-width: 150px;
+ width: 50px;
+ height:100px;
+}
+
+
+#hih{
+position: relative;
+background: ##FFFFFF;
+width: 400px;
+height: 400px;
+margin: 0 auto;
+}
+
+#hih .content {
+  width: 400px;
+  padding: 30px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+#hih .content a{
+  display: inline-block;
+  margin: 10px 0 0;
+  padding: 10px 20px;
+  text-decoration: none;
+  border: 2px solid #FFFFFF;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+#hih .sliderText {
+position: relative;
+width: 100%;
+height: 200px;
+display: flex;
+justify-content: center;
+align-items: center;
+background: #FFFFFF;
+}
+
+#hih .sliderText h3 {
+color: #FFFFFF;
+font-size: 3em;
+}
+.swiper-slide
+ {
+   width: 400px;
+
+  }
+  .p {color:#2699FB;}
+p.tt{color: #007FEB}
+
+/* css tof de profil */
+  .custom-file input[type="file"]{
+    opacity: 0;
+    width: 104%;
+    height: 259%;
+    top: -202px;
+    max-height: 148px;
+  cursor:pointer;
+  border-radius:50%;
+  border:1px solid black;
+  box-sizing:border-box;
+  overflow:hidden;
+  position:relative;
+  }
+
+.avatar{
+  width:fit-content;
+  position:relative;
+  margin-top: -35%;
+  margin-left: 58%;
+
+}
+
+.avatar-container{
+  cursor:pointer;
+  border-radius:50%;
+  border:#F2EEEE;
+  box-sizing:border-box;
+  overflow:hidden;
+  position:relative;
+}
+
+.avatar-image{
+  border-radius:50%;
+  height:100%;
+  width:auto;
+}
+.avatar-size{
+  width:10rem;
+  height:10rem;
+}
+#avatar-profil{
+right: 57%;
+top:80px;
+
+}
+#blah{
+  opacity: 1;
+  width: 113%;
+  height: 491%;
+  top: -77%;
+  cursor:pointer;
+  border-radius:50%;
+  border:1px solid black;
+  box-sizing:border-box;
+  overflow:hidden;
+  position:relative;
+  max-height: 159px;
+  max-width: 159px;
+}
+
+.edit-container{
+opacity:1;
+transition:opacity 0.2s ease-in-out;
+background-color: #F2EEEE;
+bottom:0;
+height:100%;
+left: 0;
+position: absolute;
+right: 0;
+opacity:0.8;
+text-align:center;
+font-size:200%;
+border-color: red;
+}
+.avatar-container:hover .edit-container{
+  opacity:0.5;
+}
+
+
+
+/* css tof de profil end*/

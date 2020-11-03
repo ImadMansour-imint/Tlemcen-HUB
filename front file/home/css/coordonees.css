@@ -1,0 +1,133 @@
+/* hda tae coordonees taille tae form */
+
+#form01{
+  width:50%;
+  height:60%;
+
+  top:-3%;
+
+}
+/*  */
+
+
+/* Full-width input fields */
+
+
+input[type=text], input[type=password],input[type=date],input[type=tel] {
+    width: 42%;
+    padding: 10px 20px;
+    margin: 8px 26px;
+    color: #2699FB;
+    display: inline-block;
+    border:none;
+    border-bottom: 1px solid #2699FB;
+    outline: none;
+    background: transparent;
+    box-sizing: border-box;
+  font-size:16px;
+}
+
+::placeholder {
+color: #BCE0FD;
+
+}
+
+
+ input:focus::-webkit-input-placeholder {
+color: #BCE0FD;
+}
+
+
+/* Set a style for all buttons */
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+
+/* The Modal (background) */
+
+
+.modal{
+  display:none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+
+}
+
+/* Modal Content Box */
+.modal-content {
+  border-radius: 14px 14px 14px 14px;
+-moz-border-radius: 14px 14px 14px 14px;
+-webkit-border-radius: 14px 14px 14px 14px;
+border: 0px solid #000000;
+    background-color: #fefefe;
+    margin: 4% auto 15% auto;
+    margin-top: 70px;
+    border: 1px solid #888;
+    width: 70%;
+    height: 75%;
+  padding-bottom: 30px;
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+.close:hover,.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    animation: zoom 0.6s
+}
+@keyframes zoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+#btnmm{margin-left: 500px;
+  margin-top: -10%;
+  border-radius: 109px 109px 109px 109px;
+-moz-border-radius: 109px 109px 109px 109px;
+-webkit-border-radius: 109px 109px 109px 109px;
+border: 0px solid #000000;
+}
+
+#marginins{
+  margin-left: 25%;
+
+  text-decoration-color:#2699FB ;
+  margin-top: 5%;
+
+}
+
+
+
+#tofsgh{margin-left: -103%;
+margin-top: -2.5%;
+padding-bottom: : 5%;
+
+
+}
+#tofsgh1{color: #2699FB;
+}

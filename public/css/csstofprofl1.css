@@ -1,0 +1,208 @@
+
+#numps{
+  text-align: right;
+  left: 65%;
+  color: #989898;
+}
+#btnedit{
+  left: 10%;
+}
+#btnskills{
+  margin-left: 15%;
+}
+
+.close2 {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: green;
+    font-size: 35px;
+    font-weight: bold;
+}
+.close2:hover,.close2:focus {
+    color: green;
+    cursor: pointer;
+}
+
+#modal-wrapperskills{
+  margin: 0 auto;
+  width: 80%;
+  height: 100%;
+  text-align: center;
+  top: 30px;
+  background-color: transparent;
+
+
+}
+#rechskills{
+
+  right: 18%;
+}
+
+#savebtn{
+
+ left: 5%;
+}
+
+#skillstitle{
+ text-align: left;
+}
+/* hdi tae ckeck box tae addskills */
+
+
+
+.avatar{
+  width:fit-content;
+  position:relative;
+  margin-left: 120%;
+  margin-top: -35%;
+}
+
+.avatar-container{
+  cursor:pointer;
+  border-radius:50%;
+  border:#F2EEEE;
+  box-sizing:border-box;
+  overflow:hidden;
+  position:relative;
+}
+
+.avatar-image{
+  border-radius:50%;
+  height:100%;
+  width:auto;
+}
+.avatar-size{
+  width:10rem;
+  height:10rem;
+}
+.edit-container{
+opacity:1;
+transition:opacity 0.2s ease-in-out;
+background-color: #F2EEEE;
+bottom:0;
+height:100%;
+left: 0;
+position: absolute;
+right: 0;
+opacity:0.8;
+text-align:center;
+font-size:200%;
+border-color: red;
+}
+.avatar-container:hover .edit-container{
+  opacity:0.5;
+}
+
+
+        /* css tof change */
+      .avatar2{
+        width:fit-content;
+        position:relative;
+        margin-left: 0%;
+        margin-top: 0%;
+      }
+
+
+
+          img{
+
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+
+             border-radius: 8px;
+
+             max-height: 100px;
+           max-width: 150px;
+           width: 50px;
+           height:100px;
+          }
+
+
+      /* css tof de profil */
+        .custom-file input[type="file"]{
+          opacity: 0;
+          width: 104%;
+          height: 259%;
+          top: -202px;
+          max-height: 148px;
+        cursor:pointer;
+        border-radius:50%;
+        border:1px solid black;
+        box-sizing:border-box;
+        overflow:hidden;
+        position:relative;
+        }
+
+      .avatar{
+        width:fit-content;
+        position:relative;
+        margin-left: 120%;
+        margin-top: -35%;
+      }
+
+      .avatar-container{
+        cursor:pointer;
+        border-radius:50%;
+        border:#F2EEEE;
+        box-sizing:border-box;
+        overflow:hidden;
+        position:relative;
+      }
+
+      .avatar-image{
+        border-radius:50%;
+        height:100%;
+        width:auto;
+      }
+      .avatar-size{
+        width:10rem;
+        height:10rem;
+      }
+      .edit-container{
+      opacity:1;
+      transition:opacity 0.2s ease-in-out;
+      background-color: #F2EEEE;
+      bottom:0;
+      height:100%;
+      left: 0;
+      position: absolute;
+      right: 0;
+      opacity:0.8;
+      text-align:center;
+      font-size:200%;
+      border-color: red;
+      }
+      .avatar-container:hover .edit-container{
+        opacity:0.5;
+      }
+
+      #avatar-profil{
+      right: 57%;
+      top:80px;
+
+      }
+      #blah2{
+        opacity: 1;
+        width: 113%;
+        height: 491%;
+        top: -124%;
+        cursor:pointer;
+        border-radius:50%;
+        border:1px solid black;
+        box-sizing:border-box;
+        overflow:hidden;
+        position:relative;
+        max-height: 159px;
+        max-width: 159px;
+      }
+
+      #modal-wrapperedit{
+        height: 100%;
+        width: 50%;
+       position: relative;
+       left: 25%;
+      }
+
+      /* css tof de profil end*/
