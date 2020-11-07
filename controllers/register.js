@@ -20,11 +20,11 @@ exports.register = async (req, res) => {
     req.checkBody("email", "Email is not valid")
         .notEmpty()
         .isEmail();
-        if(!email.endsWith('@esi-sba.dz')){
+        if(!email.endsWith('@univ-tlemcen.dz')){
             const errorMail = {
                 location :'body',
                 param :'email',
-                msg : 'sorry , you are not an Esi-SBA student',
+                msg : 'sorry , you are not an Tlemcen university student',
                 value : email
             }
 

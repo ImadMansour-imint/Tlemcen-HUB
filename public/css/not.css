@@ -53,6 +53,7 @@ img {
   box-sizing:border-box;
   overflow:hidden;
   position:relative;
+  padding-right: 12px;
 }
 #prjtxt{
 margin-top:-45px;

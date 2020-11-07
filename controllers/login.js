@@ -25,7 +25,7 @@ exports.loginController = async (req,res)=>{
                 req.session.isLoggedIn= true
                 req.session._id = user.id
                 console.log('user is logged in successfully')
-                if(email == "admin@esi-sba.dz") {
+                if(email == "admin@univ-tlemcen.dz") {
                     res.redirect('/admin')
                 } else {
                     res.redirect('/me')

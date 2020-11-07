@@ -33,5 +33,14 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Imad-Mnsr/ESI-HUB.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/Imad-Mnsr/ESI-HUB/issues"
+  },
+  "homepage": "https://github.com/Imad-Mnsr/ESI-HUB#readme"
 }

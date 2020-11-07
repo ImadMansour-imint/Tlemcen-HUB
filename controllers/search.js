@@ -1,5 +1,5 @@
 const Project = require('../models/Project')
-const User = require('../models/users')
+const User = require('../models/Users')
 const sequelize = require('sequelize')
 const Op = sequelize.Op
 exports.getSearch = (req, res, next) => {
