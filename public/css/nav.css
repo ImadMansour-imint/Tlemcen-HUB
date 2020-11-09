@@ -9,6 +9,7 @@
 #drop{
   top:15px;
   right: 50px;
+  position: relative;
 }
 
 #drop2{
@@ -74,7 +75,7 @@ width: 29%;
 #margli22{
 margin-right: 0px;
 
-margin-top: -3%;
+margin-top: 10px;
 margin-bottom: -20px;
 
 

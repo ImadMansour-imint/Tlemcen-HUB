@@ -19,6 +19,7 @@ exports.myProfile = async(req, res) => {
                     linkedin : user.linkedIn,
                     github : user.gitHub,
                     bio : user.bio,
+                    email : user.email,
                     skills: JSON.parse(user.skills),
                     
                 },

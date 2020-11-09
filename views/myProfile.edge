@@ -90,7 +90,7 @@
                    </div>
                   <a id="aedit" onclick="document.getElementById('modal-wrapperedit').style.display='block'"  href="#"  class="btn btn-lg btn-info" disabled><strong>Edit Profil</strong></a>
                   <div id='numps' class="col-md-4">
-                  <strong> {{projectsNumber}} project  13 skills</strong>
+                  <strong> {{projectsNumber || 0}} project  {{profile.skills.length}} skills</strong>
                   </div>
 
 
@@ -255,7 +255,7 @@
               </div>
               <div id="tofsgh" class="col ">
 
-                <a id="link" href={{profile.github}} target="_blank"> <strong>github</strong></a>
+                <a id="link" href={{profile.github}} target="_blank"> <strong> nbp github</strong></a>
               </div>
               </div>
 
@@ -325,7 +325,7 @@
 
 
 
-        <!-- hna ybda tae edit profile t9wdt -->
+        <!-- hna ybda tae edit profile  -->
 
         <div id="modal-wrapperedit"  class="modal" >
 
@@ -366,7 +366,7 @@
                     <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
                       <div class="text-center text-sm-left mb-2 mb-sm-0">
                         <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">{{ profile.name }}</h4>
-                        <p class="mb-0">imad@esi-sba.dz</p>
+                        <p class="mb-0">{{profile.email}}</p>
                       </div>
                     </div>
                       </div>
@@ -376,7 +376,7 @@
                                   <div class="col">
                                     <div class="form-group">
                                       <label>user Name</label>
-                                      <input class="form-control" type="text" name="name" placeholder="Samy belambri" value={{profile.name}}>
+                                      <input class="form-control" type="text" name="name"  value={{profile.name}}>
                                     </div>
                                   </div>
 
@@ -394,6 +394,7 @@
                                   <div class="col">
                                     <div class="form-group">
                                       <label>github</label>
+                                      &nbsp; &nbsp; 
                                       <input class="form-control" type="text" value={{ profile.github || 'github'}} name="github">
                                     </div>
                                   </div>
@@ -401,7 +402,7 @@
                                 <div class="row">
                                   <div class="col">
                                     <div class="form-group">
-                                      <label>linkedin</label>
+                                      <label>linkedin</label>&nbsp; 
                                       <input class="form-control" type="text" value={{ profile.linkedin || 'linkedin' }} name="linkedin">
                                     </div>
                                   </div>
