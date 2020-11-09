@@ -20,10 +20,10 @@ exports.myProfile = async(req, res) => {
                     github : user.gitHub,
                     bio : user.bio,
                     email : user.email,
+                    id:user.id,
                     skills: JSON.parse(user.skills),
                     
                 },
-                projs : projects,
                 projectsNumber: projects.length,
                 pubs: pubs
             })
@@ -91,6 +91,7 @@ exports.updateProfile = (req , res)=>{
                 linkedin : user.linkedIn,
                 github : user.gitHub,
                 bio : user.bio,
+                id:user.id,
                 skills : JSON.parse(user.skills)
             },
         })

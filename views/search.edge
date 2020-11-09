@@ -154,7 +154,21 @@ document.getElementById("mobile__menu").style.width = "0";
 <script src="/js/async.js"></script>
 <script  src="function.js"></script>
 <script>
-  $('.form').find('input, textarea').on('keyup blur focus', function (e) {
+$('.tab a').on('click', function (e) {
+
+e.preventDefault();
+
+
+$(this).parent().addClass('active');
+$(this).parent().siblings().removeClass('active');
+
+target = $(this).attr('href');
+
+$('.tab-content > div').not(target).hide();
+
+$(target).fadeIn(600);
+
+});  $('.form').find('input, textarea').on('keyup blur focus', function (e) {
 
   var $this = $(this),
       label = $this.prev('label');
@@ -184,21 +198,7 @@ document.getElementById("mobile__menu").style.width = "0";
 });
 
 
-$('.tab a').on('click', function (e) {
 
-  e.preventDefault();
-
-
-  $(this).parent().addClass('active');
-  $(this).parent().siblings().removeClass('active');
-
-  target = $(this).attr('href');
-
-  $('.tab-content > div').not(target).hide();
-
-  $(target).fadeIn(600);
-
-});
 
 </script>
 
