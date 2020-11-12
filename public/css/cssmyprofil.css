@@ -28,7 +28,13 @@ img {
   max-width: 100%;
 }
 
-
+.delete_skill{
+  display: none;
+}
+.delete_skill2{
+  display: inline;
+  color:red;
+}
   .content {
     float: left;
     padding: 1.875em;

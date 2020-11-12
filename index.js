@@ -113,6 +113,7 @@ app.get('/auth/logout' ,loginController.logoutController)
 
 app.get('/me' ,profileController.myProfile)
 app.post('/me/updateSkills' , profileController.updateSkills)
+app.get('/me/:skill' , profileController.deleteSkills)
 app.post('/updateMe' ,profileController.updateProfile)
 app.get('/profile/:id' , profileController.getProfile)
 

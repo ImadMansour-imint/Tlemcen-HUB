@@ -118,7 +118,12 @@
 
                  <ol class="v">
                    @each(skill in profile.skills)
-                   <li><i id="nike" class="fas fa-check-square"></i> {{skill}}</li>
+                   <li onmouseout="hidetrash('{{$loop.index}}')"  onmouseover="showtrash('{{$loop.index}}')" style="cursor:pointer" >
+                    <i id="nike" class="fas fa-check-square " ></i>
+                     {{skill}} 
+                    &nbsp;&nbsp;&nbsp;
+                      <i title="delete Skill" class="fa fa-trash delete_skill" id="{{$loop.index}}" aria-hidden="true" onclick=" confirm('Are you sure you want to  delete this Skill');location.href='/me/{{skill}}'"></i>
+                    </li>
                    @endeach
 
                  </ol>
@@ -448,6 +453,22 @@
 <script type="text/javascript" src="/js/mobile.js"></script>
 <script src="/js/async.js"></script>
 <script >
+
+//delete skill
+function showtrash(node){
+  node = node.toString()
+  var element = document.getElementById(node);
+  element.classList.remove("delete_skill")
+  element.classList.add("delete_skill2")
+}
+
+function hidetrash(node2){
+  node2 = node2.toString()
+  var element = document.getElementById(node2);
+  element.classList.add("delete_skill")
+  element.classList.remove("delete_skill2")
+
+}
 
 // hna tae timporter tof de profil
 

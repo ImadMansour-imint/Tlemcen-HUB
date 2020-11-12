@@ -19,7 +19,8 @@ exports.postSearchProject = (req, res, next) => {
             path:'/searchProject',
             projs: projects
         })
-    })
+    }
+    )
     .catch(err => console.log(err))
 }
 exports.postSearchUser = (req, res, next) => {

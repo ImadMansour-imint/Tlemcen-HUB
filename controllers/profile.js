@@ -6,7 +6,6 @@ const Pub = require('../models/Pub')
 
 exports.myProfile = async(req, res) => {
     const id = req.session._id
-    console.log(id)
     const user = await User.findOne({where : {id : id}})
     user.getProjects()
     .then(projects => {
@@ -37,14 +36,12 @@ exports.myProfile = async(req, res) => {
 }
 
 exports.updateProfile = (req , res)=>{
-    console.log('userrrrrrrr')
 
     const id = req.session._id
     const fb = req.body.facebook
     const linkedIn = req.body.linkedin
     const gitHub = req.body.github
     const bio = req.body.bio
-    console.log('userrrrrrrr')
 
     User.update(
         {
@@ -66,7 +63,7 @@ exports.updateProfile = (req , res)=>{
         const id = req.session._id
         const skills = req.body.skills
         console.log(id)
-        console.log(skills)
+        console.log(skills+"update")
         User.update(
             {skills} ,
             {where :{id : id}} )
@@ -74,6 +71,26 @@ exports.updateProfile = (req , res)=>{
             res.redirect('/me')
 
     }
+
+    exports.deleteSkills = async(req,res)=>{
+        const id = req.session._id
+        const skillDel = req.params.skill
+        console.log(id)
+        const user = await User.findOne({ where :{id : id} });
+            if (user === null) {
+                console.log("User not found");
+            }
+             else {
+                var skillpast =JSON.parse(user.skills) 
+                newskills = Object.values(skillpast).filter(item => item !== skillDel)
+                newskills = JSON.stringify(newskills)
+                user.update(
+                    {skills : newskills} ,
+                    {where :{id : id}} )
+                    .then(user => console.log(user.skills) )
+                     }
+            res.redirect('/me')
+      }
 
     exports.getProfile = async(req , res) =>{
         console.log(req)
