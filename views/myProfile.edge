@@ -316,7 +316,7 @@
     </div>
     <div class="col" id="svcsl">
       <input type="submit" value="SAVE" class="btn btn-round secondary-button save" >
-      <button class="btn btn-round cancel" type="button" onclick="cancel_exp(this)">Cancel</button>
+      <button class="btn btn-round cancel" type="button" onclick="document.getElementById('modal-wrapperskills').style.display='none'">Cancel</button>
     </div>
   </div>
 </div>
@@ -453,7 +453,7 @@
 <script type="text/javascript" src="/js/mobile.js"></script>
 <script src="/js/async.js"></script>
 <script >
-
+console.log({{projs}});
 //delete skill
 function showtrash(node){
   node = node.toString()

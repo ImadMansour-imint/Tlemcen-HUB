@@ -4,6 +4,10 @@ const db = require("../config/database");
 const path = require('path')
 const Pub = require('../models/Pub')
 
+const sequelize = require('sequelize')
+const Op = sequelize.Op
+
+
 exports.myProfile = async(req, res) => {
     const id = req.session._id
     const user = await User.findOne({where : {id : id}})
@@ -24,6 +28,7 @@ exports.myProfile = async(req, res) => {
                     
                 },
                 projectsNumber: projects.length,
+                projs:projects,
                 pubs: pubs
             })
         })
@@ -93,7 +98,6 @@ exports.updateProfile = (req , res)=>{
       }
 
     exports.getProfile = async(req , res) =>{
-        console.log(req)
         //if requested profile is myprofile
         // if (req.session._id == req.params.id) return redirect('/me')
         //if requested profile isn't mine
@@ -112,4 +116,35 @@ exports.updateProfile = (req , res)=>{
                 skills : JSON.parse(user.skills)
             },
         })
+    }
+
+    exports.searchDevOrPrj = (req,res)=>{
+        query = req.body.search
+        User.findAll({where: {userName: query}})
+        .then(users => {
+            if(users.length != 0 ){
+                console.log(users);
+                res.render('users-list', {
+                    pageTitle:'Users',
+                    path:'/searchUser',
+                    users: users
+                })
+            }
+            else{
+                project = req.body.search
+                Project.findAll({where:  {[Op.or]:[{title:'%' + project + '%'},{description:'%' + project + '%'}]}})
+                .then(projects => {
+                    if(projects.length != 0){                    res.render('project/projects-list', {
+                        pageTitle:'Projects',
+                        path:'/searchProject',
+                        projs: projects
+                    })}
+                    else res.redirect('/me')
+
+                })
+            }
+
+        })
+        .catch(err => console.log(err))
+          
     }

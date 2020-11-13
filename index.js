@@ -112,6 +112,7 @@ app.post('/auth/login' ,loginController.loginController)
 app.get('/auth/logout' ,loginController.logoutController)
 
 app.get('/me' ,profileController.myProfile)
+app.post('/me' ,profileController.searchDevOrPrj)
 app.post('/me/updateSkills' , profileController.updateSkills)
 app.get('/me/:skill' , profileController.deleteSkills)
 app.post('/updateMe' ,profileController.updateProfile)
