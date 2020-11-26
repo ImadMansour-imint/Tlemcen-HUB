@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  
+<!-- Google Analytics -->
+<script async="" src="index_files/analytics.js"></script><script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-108243656-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+  <title>Introduction | Socket.IO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="What Socket.IO isSocket.IO is a library that enables real-time, bidirectional and event-based communication between the browser and the server. It consists of:  a Node.js server: Source | API a Javasc">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Introduction">
+<meta property="og:url" content="https://socket.io/docs/v3/index.html">
+<meta property="og:site_name" content="Socket.IO">
+<meta property="og:description" content="What Socket.IO isSocket.IO is a library that enables real-time, bidirectional and event-based communication between the browser and the server. It consists of:  a Node.js server: Source | API a Javasc">
+<meta property="og:locale">
+<meta property="og:image" content="https://socket.io/images/favicon.png">
+<meta property="article:published_time" content="2020-11-12T13:42:04.344Z">
+<meta property="article:modified_time" content="2020-11-12T13:42:04.344Z">
+<meta property="article:author" content="Damien Arrachequesne">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://socket.io/images/favicon.png">
+  
+  
+    <link rel="icon" href="https://socket.io/images/favicon.png">
+  
+  
+    <link href="index_files/css_002.css" rel="stylesheet" type="text/css">
+  
+
+  
+<link rel="stylesheet" href="index_files/style.css">
+
+
+  <link href="index_files/css.css" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="index_files/docsearch.css">
+<meta name="generator" content="Hexo 5.2.0"><script id="_carbonads_projs" type="text/javascript" src="index_files/CKYIL53N.js"></script></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <a id="logo" href="https://socket.io/"></a>
+  <nav class="main-nav">
+    <ul class="nav-items">
+      <li>
+        <span class="algolia-autocomplete" style="position: relative; display: inline-block; direction: ltr;"><input id="docsearch-input" type="text" placeholder="Search..." class="ds-input" autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-label="search input" aria-owns="algolia-autocomplete-listbox-0" style="position: relative; vertical-align: top;" dir="auto"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: &quot;Open Sans&quot;, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: normal; text-indent: 0px; text-rendering: optimizelegibility; text-transform: none;"></pre><span class="ds-dropdown-menu" style="position: absolute; top: 100%; z-index: 100; display: none; left: 0px; right: auto;" role="listbox" id="algolia-autocomplete-listbox-0"><div class="ds-dataset-1"></div></span></span>
+      </li>
+      <li>
+        <div class="dropdown">
+          <span class="dropdown-toggle nav-item">Learn</span>
+          <ul class="dropdown-content">
+            <li>
+              <a href="https://socket.io/get-started/chat/" class="nav-link">Get started</a>
+            </li>
+            <li>
+              <a href="https://socket.io/docs/v3" class="nav-link">Documentation</a>
+            </li>
+            <li>
+              <a href="https://socket.io/demos/chat/" class="nav-link">Demos</a>
+            </li>
+            <li class="anchor"></li>
+            <li>
+              <a href="https://socket.io/docs/v3/server-api/" class="nav-link">Server API</a>
+            </li>
+            <li>
+              <a href="https://socket.io/docs/v3/client-api/" class="nav-link">Client API</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div class="dropdown">
+          <span class="dropdown-toggle nav-item">Resources</span>
+          <ul class="dropdown-content">
+            <li>
+              <span class="nav-links-header">Getting help</span>
+              <ul>
+                <li>
+                  <a href="https://socketio-slackin.herokuapp.com/" target="_blank" class="nav-link">Slack</a>
+                </li>
+                <li>
+                  <a href="https://stackoverflow.com/questions/tagged/socket.io" target="_blank" class="nav-link">Stack Overflow</a>
+                </li>
+              </ul>
+            </li>
+            <li class="anchor"></li>
+            <li>
+              <span class="nav-links-header">News</span>
+              <ul>
+                <li>
+                  <a href="https://socket.io/blog/" class="nav-link">Blog</a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/SocketIO" target="_blank" class="nav-link">Twitter</a>
+                </li>
+              </ul>
+            </li>
+            <li class="anchor"></li>
+            <li>
+              <span class="nav-links-header">Links</span>
+              <ul>
+                <li>
+                  <a href="https://github.com/socketio/socket.io" target="_blank" class="nav-link">GitHub</a>
+                </li>
+                <li>
+                  <a href="https://cdnjs.com/libraries/socket.io" target="_blank" class="nav-link">CDN</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="https://opencollective.com/socketio" target="_blank" class="nav-item">Support Socket.IO</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+
+      
+      <aside id="sidebar">
+  
+    <ol class="items">
+      
+
+      
+        
+          
+            <li><h3>Documentation</h3></li>
+          
+        
+
+        
+          <li>
+            <a href="https://socket.io/docs/v3/" class="sidebar-link selected">Introduction</a>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#What-Socket-IO-is"><span class="toc-text">What Socket.IO is</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#What-Socket-IO-is-not"><span class="toc-text">What Socket.IO is not</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Minimal-working-example"><span class="toc-text">Minimal working example</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Features"><span class="toc-text">Features</span></a></li></ol>
+          </li>
+        
+      
+        
+          
+        
+
+        
+          <li>
+            <a href="https://socket.io/docs/v3/emit-cheatsheet/" class="sidebar-link">Emit cheatsheet</a>
+          </li>
+        
+      
+        
+          
+        
+
+        
+          <li>
+            <a href="https://socket.io/docs/v3/logging-and-debugging/" class="sidebar-link">Logging and debugging</a>
+          </li>
+        
+      
+        
+          
+            <li><h3>Server</h3></li>
+          
+        
+
+        
+          <li>
+            <a href="https://socket.io/docs/v3/server-installation/" class="sidebar-link">Installation</a>
+          </li>
+        
+      
+        
+          
+        
+
+        
+          <li>
+            <a href="https://socket.io/docs/v3/server-initialization/" class="sidebar-link">Initialization</a>
+          </li>
+        
+      
+        
+          
+        
+
+        
+          <li>
+            <a href="https://socket.io/docs/v3/emitting-events/" class="sidebar-link">Emitting events</a>
+          </li>
+        
+      
+        
+          
+        
+
+        
+          <li>
+            <a href="https://socket.io/docs/v3/broadcasting-events/" class="sidebar-link">Broadcasting events</a>
+          </li>
+        
+      
+        
+          
+        
+
+        
+          <li>
+            <a href="https://socket.io/docs/v3/rooms/" class="sidebar-link">Rooms</a>
+          </li>
+        
+      
+        
+          
+        
+
+        
+          <li>
+            <a href="https://socket.io/docs/v3/namespaces/" class="sidebar-link">Namespaces</a>
+          </li>
+        
+      
+        
+          
+        
+
+        
+          <li>
+            <a href="https://socket.io/docs/v3/using-multiple-nodes/" class="sidebar-link">Using multiple nodes</a>
+          </li>
+        
+      
+        
+          
+        
+
+        
+          <li>
+            <a href="https://socket.io/docs/v3/handling-cors/" class="sidebar-link">Handling CORS</a>
+          </li>
+        
+      
+        
+          
+            <li><h3>Client</h3></li>
+          
+        
+
+        
+          <li>
+            <a href="https://socket.io/docs/v3/client-installation/" class="sidebar-link">Installation</a>
+          </li>
+        
+      
+        
+          
+        
+
+        
+          <li>
+            <a href="https://socket.io/docs/v3/client-initialization/" class="sidebar-link">Initialization</a>
+          </li>
+        
+      
+        
+          
+            <li><h3>Migrations</h3></li>
+          
+        
+
+        
+          <li>
+            <a href="https://socket.io/docs/v3/migrating-from-2-x-to-3-0/" class="sidebar-link">Migrating from 2.x to 3.0</a>
+          </li>
+        
+      
+        
+          
+            <li><h3>Miscellaneous</h3></li>
+          
+        
+
+        
+          <li>
+            <a href="https://socket.io/docs/v3/faq/" class="sidebar-link">FAQ</a>
+          </li>
+        
+      
+    </ol>
+  
+
+</aside>
+
+      
+      <script async="" type="text/javascript" src="index_files/carbon.js" id="_carbonads_js"></script><div id="carbonads"><span><span class="carbon-wrap"><a href="https://srv.carbonads.net/ads/click/x/GTND42JECWAD453WCYS4YKQNCTBIVK3MCWSITZ3JCYYDP23ICEBDK23KC67IL2JJFTYDL23YCWYIV5QLCE7D42JJHEYIKK3MFTYDPKJECTNCYBZ52K?segment=placement:socketio;" class="carbon-img" target="_blank" rel="noopener sponsored"><img src="index_files/1589291991-adobe-stock.jpg" alt="ads via Carbon" style="max-width: 130px;" border="0"></a><a href="https://srv.carbonads.net/ads/click/x/GTND42JECWAD453WCYS4YKQNCTBIVK3MCWSITZ3JCYYDP23ICEBDK23KC67IL2JJFTYDL23YCWYIV5QLCE7D42JJHEYIKK3MFTYDPKJECTNCYBZ52K?segment=placement:socketio;" class="carbon-text" target="_blank" rel="noopener sponsored">Limited time offer: Get 10 free Adobe Stock images.</a></span><a href="http://carbonads.net/?utm_source=socketio&amp;utm_medium=ad_via_link&amp;utm_campaign=in_unit&amp;utm_term=carbon" class="carbon-poweredby" target="_blank" rel="noopener sponsored">ads via Carbon</a></span></div>
+      
+
+<article id="page-" class="article">
+
+  
+    <div class="tip warning">
+      You're browsing the documentation for v3.x. For v2.x, click <a href="https://socket.io/docs/v2/">here</a>.
+    </div>
+  
+
+  <h1>Introduction</h1>
+
+  <h2 id="What-Socket-IO-is"><a href="#What-Socket-IO-is" class="headerlink" title="What Socket.IO is"></a>What Socket.IO is</h2><p>Socket.IO
+ is a library that enables real-time, bidirectional and event-based 
+communication between the browser and the server. It consists of:</p>
+<ul>
+<li>a Node.js server: <a target="_blank" rel="noopener" href="https://github.com/socketio/socket.io">Source</a> | <a href="https://socket.io/docs/v3/server-api/">API</a></li>
+<li>a Javascript client library for the browser (which can be also run from Node.js): <a target="_blank" rel="noopener" href="https://github.com/socketio/socket.io-client">Source</a> | <a href="https://socket.io/docs/v3/client-api/">API</a></li>
+</ul>
+<img src="index_files/bidirectional-communication.png" alt="Diagram for bidirectional communication">
+
+<p>There are also several client implementation in other languages, which are maintained by the community:</p>
+<ul>
+<li>Java: <a target="_blank" rel="noopener" href="https://github.com/socketio/socket.io-client-java">https://github.com/socketio/socket.io-client-java</a></li>
+<li>C++: <a target="_blank" rel="noopener" href="https://github.com/socketio/socket.io-client-cpp">https://github.com/socketio/socket.io-client-cpp</a></li>
+<li>Swift: <a target="_blank" rel="noopener" href="https://github.com/socketio/socket.io-client-swift">https://github.com/socketio/socket.io-client-swift</a></li>
+<li>Dart: <a target="_blank" rel="noopener" href="https://github.com/rikulo/socket.io-client-dart">https://github.com/rikulo/socket.io-client-dart</a></li>
+<li>Python: <a target="_blank" rel="noopener" href="https://github.com/miguelgrinberg/python-socketio">https://github.com/miguelgrinberg/python-socketio</a></li>
+<li>.Net: <a target="_blank" rel="noopener" href="https://github.com/Quobject/SocketIoClientDotNet">https://github.com/Quobject/SocketIoClientDotNet</a></li>
+</ul>
+<h3 id="How-does-that-work"><a href="#How-does-that-work" class="headerlink" title="How does that work?"></a>How does that work?</h3><p>The client will try to establish a <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket">WebSocket</a> connection if possible, and will fall back on HTTP long polling if not.</p>
+<p>WebSocket is a communication protocol which provides a full-duplex 
+and low-latency channel between the server and the browser. More 
+information can be found <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/WebSocket">here</a>.</p>
+<p>So, in the best-case scenario, provided that:</p>
+<ul>
+<li>the browser supports WebSocket (<a target="_blank" rel="noopener" href="https://caniuse.com/#search=websocket">97%</a> of all browsers in 2020)</li>
+<li>there is no element (proxy, firewall, …) preventing WebSocket connections between the client and the server  </li>
+</ul>
+<p>you can consider the Socket.IO client as a “slight” wrapper around the WebSocket API. Instead of writing:</p>
+<figure class="highlight js"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> socket = <span class="keyword">new</span> WebSocket(<span class="string">'ws://localhost:3000'</span>);</span><br><span class="line"></span><br><span class="line">socket.onopen(<span class="function">() =&gt;</span> {</span><br><span class="line">  socket.send(<span class="string">'Hello!'</span>);</span><br><span class="line">});</span><br><span class="line"></span><br><span class="line">socket.onmessage(<span class="function"><span class="params">data</span> =&gt;</span> {</span><br><span class="line">  <span class="built_in">console</span>.log(data);</span><br><span class="line">});</span><br></pre></td></tr></tbody></table></figure>
+
+<p>You will have, on the client-side:</p>
+<figure class="highlight js"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> socket = io(<span class="string">'ws://localhost:3000'</span>);</span><br><span class="line"></span><br><span class="line">socket.on(<span class="string">'connect'</span>, <span class="function">() =&gt;</span> {</span><br><span class="line">  <span class="comment">// either with send()</span></span><br><span class="line">  socket.send(<span class="string">'Hello!'</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// or with emit() and custom event names</span></span><br><span class="line">  socket.emit(<span class="string">'salutations'</span>, <span class="string">'Hello!'</span>, { <span class="string">'mr'</span>: <span class="string">'john'</span> }, <span class="built_in">Uint8Array</span>.from([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]));</span><br><span class="line">});</span><br><span class="line"></span><br><span class="line"><span class="comment">// handle the event sent with socket.send()</span></span><br><span class="line">socket.on(<span class="string">'message'</span>, <span class="function"><span class="params">data</span> =&gt;</span> {</span><br><span class="line">  <span class="built_in">console</span>.log(data);</span><br><span class="line">});</span><br><span class="line"></span><br><span class="line"><span class="comment">// handle the event sent with socket.emit()</span></span><br><span class="line">socket.on(<span class="string">'greetings'</span>, <span class="function">(<span class="params">elem1, elem2, elem3</span>) =&gt;</span> {</span><br><span class="line">  <span class="built_in">console</span>.log(elem1, elem2, elem3);</span><br><span class="line">});</span><br></pre></td></tr></tbody></table></figure>
+
+<p>The API on the server-side is similar, you also get an <code>socket</code> object which extends the Node.js <a target="_blank" rel="noopener" href="https://nodejs.org/docs/latest/api/events.html#events_class_eventemitter">EventEmitter</a> class:</p>
+<figure class="highlight js"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> io = <span class="built_in">require</span>(<span class="string">'socket.io'</span>)(<span class="number">3000</span>);</span><br><span class="line"></span><br><span class="line">io.on(<span class="string">'connection'</span>, <span class="function"><span class="params">socket</span> =&gt;</span> {</span><br><span class="line">  <span class="comment">// either with send()</span></span><br><span class="line">  socket.send(<span class="string">'Hello!'</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// or with emit() and custom event names</span></span><br><span class="line">  socket.emit(<span class="string">'greetings'</span>, <span class="string">'Hey!'</span>, { <span class="string">'ms'</span>: <span class="string">'jane'</span> }, Buffer.from([<span class="number">4</span>, <span class="number">3</span>, <span class="number">3</span>, <span class="number">1</span>]));</span><br><span class="line"></span><br><span class="line">  <span class="comment">// handle the event sent with socket.send()</span></span><br><span class="line">  socket.on(<span class="string">'message'</span>, <span class="function">(<span class="params">data</span>) =&gt;</span> {</span><br><span class="line">    <span class="built_in">console</span>.log(data);</span><br><span class="line">  });</span><br><span class="line"></span><br><span class="line">  <span class="comment">// handle the event sent with socket.emit()</span></span><br><span class="line">  socket.on(<span class="string">'salutations'</span>, <span class="function">(<span class="params">elem1, elem2, elem3</span>) =&gt;</span> {</span><br><span class="line">    <span class="built_in">console</span>.log(elem1, elem2, elem3);</span><br><span class="line">  });</span><br><span class="line">});</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Socket.IO provides additional features over a plain WebSocket object, which are listed <a href="#Features">below</a>.</p>
+<p>But first, let’s detail what the Socket.IO library is not.</p>
+<h2 id="What-Socket-IO-is-not"><a href="#What-Socket-IO-is-not" class="headerlink" title="What Socket.IO is not"></a>What Socket.IO is not</h2><p>Socket.IO is <strong>NOT</strong>
+ a WebSocket implementation. Although Socket.IO indeed uses WebSocket as
+ a transport when possible, it adds additional metadata to each packet. 
+That is why a WebSocket client will not be able to successfully connect 
+to a Socket.IO server, and a Socket.IO client will not be able to 
+connect to a plain WebSocket server either.</p>
+<figure class="highlight js"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// WARNING: the client will NOT be able to connect!</span></span><br><span class="line"><span class="keyword">const</span> socket = io(<span class="string">'ws://echo.websocket.org'</span>);</span><br></pre></td></tr></tbody></table></figure>
+
+<p>If you are looking for a plain WebSocket server, please take a look at <a target="_blank" rel="noopener" href="https://github.com/websockets/ws">ws</a> or <a target="_blank" rel="noopener" href="https://github.com/uNetworking/uWebSockets.js">uWebSockets.js</a>.</p>
+<p>There are also <a target="_blank" rel="noopener" href="https://github.com/nodejs/node/issues/19308">talks</a> to include a WebSocket server in the Node.js core.</p>
+<p>On the client-side, you might be interested by the <a target="_blank" rel="noopener" href="https://github.com/nathanboktae/robust-websocket">robust-websocket</a> package.</p>
+<h2 id="Minimal-working-example"><a href="#Minimal-working-example" class="headerlink" title="Minimal working example"></a>Minimal working example</h2><p>If you are new to the Node.js ecosystem, please take a look at the <a href="https://socket.io/get-started/chat">Get Started</a> guide, which is ideal for beginners. </p>
+<p>Else, let’s start right away! The server library can be installed from NPM:</p>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">$ npm install socket.io</span><br></pre></td></tr></tbody></table></figure>
+
+<p>More information about the installation can be found in the <a href="https://socket.io/docs/v3/server-installation/">Server installation</a> page.</p>
+<p>Then, let’s create an <code>index.js</code> file, with the following content:</p>
+<figure class="highlight js"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> content = <span class="built_in">require</span>(<span class="string">'fs'</span>).readFileSync(__dirname + <span class="string">'/index.html'</span>, <span class="string">'utf8'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> httpServer = <span class="built_in">require</span>(<span class="string">'http'</span>).createServer(<span class="function">(<span class="params">req, res</span>) =&gt;</span> {</span><br><span class="line">  <span class="comment">// serve the index.html file</span></span><br><span class="line">  res.setHeader(<span class="string">'Content-Type'</span>, <span class="string">'text/html'</span>);</span><br><span class="line">  res.setHeader(<span class="string">'Content-Length'</span>, Buffer.byteLength(content));</span><br><span class="line">  res.end(content);</span><br><span class="line">});</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> io = <span class="built_in">require</span>(<span class="string">'socket.io'</span>)(httpServer);</span><br><span class="line"></span><br><span class="line">io.on(<span class="string">'connection'</span>, <span class="function"><span class="params">socket</span> =&gt;</span> {</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'connect'</span>);</span><br><span class="line">});</span><br><span class="line"></span><br><span class="line">httpServer.listen(<span class="number">3000</span>, <span class="function">() =&gt;</span> {</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'go to http://localhost:3000'</span>);</span><br><span class="line">});</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Here, a classic Node.js <a target="_blank" rel="noopener" href="https://nodejs.org/docs/latest/api/http.html#http_class_http_server">HTTP server</a> is started to serve the <code>index.html</code> file, and the Socket.IO server is attached to it. Please see the <a href="https://socket.io/docs/v3/server-initialization/">Server initialization</a> page for the various ways to create a server.</p>
+<p>Let’s create the <code>index.html</code> file next to it:</p>
+<figure class="highlight html"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Minimal working example<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"events"</span>&gt;</span><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"/socket.io/socket.io.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">const</span> $events = <span class="built_in">document</span>.getElementById(<span class="string">'events'</span>);</span></span><br><span class="line"></span><br><span class="line"><span class="javascript">        <span class="keyword">const</span> newItem = <span class="function">(<span class="params">content</span>) =&gt;</span> {</span></span><br><span class="line"><span class="javascript">          <span class="keyword">const</span> item = <span class="built_in">document</span>.createElement(<span class="string">'li'</span>);</span></span><br><span class="line">          item.innerText = content;</span><br><span class="line"><span class="javascript">          <span class="keyword">return</span> item;</span></span><br><span class="line">        };</span><br><span class="line"></span><br><span class="line"><span class="javascript">        <span class="keyword">const</span> socket = io();</span></span><br><span class="line"></span><br><span class="line"><span class="javascript">        socket.on(<span class="string">'connect'</span>, <span class="function">() =&gt;</span> {</span></span><br><span class="line"><span class="javascript">          $events.appendChild(newItem(<span class="string">'connect'</span>));</span></span><br><span class="line">        });</span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>Finally, let’s start our server:</p>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">$ node index.js</span><br></pre></td></tr></tbody></table></figure>
+
+<p>And voilà!</p>
+<img src="index_files/minimal-example-connect.gif" alt="Minimal working example - connect event on both sides">
+
+<p>The <code>socket</code> object on both sides extends the EventEmitter class, so:</p>
+<ul>
+<li>sending an event is done with: <code>socket.emit()</code></li>
+<li>receiving an event is done by registering a listener: <code>socket.on(&lt;event name&gt;, &lt;listener&gt;)</code> </li>
+</ul>
+<h3 id="To-send-an-event-from-the-server-to-the-client"><a href="#To-send-an-event-from-the-server-to-the-client" class="headerlink" title="To send an event from the server to the client"></a>To send an event from the server to the client</h3><p>Let’s update the <code>index.js</code> file (server-side):</p>
+<figure class="highlight js"><table><tbody><tr><td class="code"><pre><span class="line">io.on(<span class="string">'connection'</span>, <span class="function"><span class="params">socket</span> =&gt;</span> {</span><br><span class="line">  <span class="keyword">let</span> counter = <span class="number">0</span>;</span><br><span class="line">  <span class="built_in">setInterval</span>(<span class="function">() =&gt;</span> {</span><br><span class="line">    socket.emit(<span class="string">'hello'</span>, ++counter);</span><br><span class="line">  }, <span class="number">1000</span>);</span><br><span class="line">});</span><br></pre></td></tr></tbody></table></figure>
+
+<p>And the <code>index.html</code> file (client-side):</p>
+<figure class="highlight js"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> socket = io();</span><br><span class="line"></span><br><span class="line">socket.on(<span class="string">'connect'</span>, <span class="function">() =&gt;</span> {</span><br><span class="line">  $events.appendChild(newItem(<span class="string">'connect'</span>));</span><br><span class="line">});</span><br><span class="line"></span><br><span class="line">socket.on(<span class="string">'hello'</span>, <span class="function">(<span class="params">counter</span>) =&gt;</span> {</span><br><span class="line">  $events.appendChild(newItem(<span class="string">`hello - <span class="subst">${counter}</span>`</span>));</span><br><span class="line">});</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Demo:</p>
+<img src="index_files/minimal-example-server-to-client.gif" alt="Minimal working example - server to client communication">
+
+<h3 id="To-send-a-message-from-the-client-to-the-server"><a href="#To-send-a-message-from-the-client-to-the-server" class="headerlink" title="To send a message from the client to the server"></a>To send a message from the client to the server</h3><p>Let’s update the <code>index.js</code> file (server-side):</p>
+<figure class="highlight js"><table><tbody><tr><td class="code"><pre><span class="line">io.on(<span class="string">'connection'</span>, <span class="function"><span class="params">socket</span> =&gt;</span> {</span><br><span class="line">  socket.on(<span class="string">'hey'</span>, <span class="function"><span class="params">data</span> =&gt;</span> {</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'hey'</span>, data);</span><br><span class="line">  });</span><br><span class="line">});</span><br></pre></td></tr></tbody></table></figure>
+
+<p>And the <code>index.html</code> file (client-side):</p>
+<figure class="highlight js"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> socket = io();</span><br><span class="line"></span><br><span class="line">socket.on(<span class="string">'connect'</span>, <span class="function">() =&gt;</span> {</span><br><span class="line">  $events.appendChild(newItem(<span class="string">'connect'</span>));</span><br><span class="line">});</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> counter = <span class="number">0</span>;</span><br><span class="line"><span class="built_in">setInterval</span>(<span class="function">() =&gt;</span> {</span><br><span class="line">  ++counter;</span><br><span class="line">  socket.emit(<span class="string">'hey'</span>, { counter }); <span class="comment">// the object will be serialized for you</span></span><br><span class="line">}, <span class="number">1000</span>);</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Demo:</p>
+<img src="index_files/minimal-example-client-to-server.gif" alt="Minimal working example - client to server communication">
+
+<p>Now, let’s detail the features provided by Socket.IO.</p>
+<h2 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h2><p>Its main features are:</p>
+<h3 id="Reliability"><a href="#Reliability" class="headerlink" title="Reliability"></a>Reliability</h3><p>Connections are established even in the presence of:</p>
+<ul>
+<li>proxies and load balancers.</li>
+<li>personal firewall and antivirus software.</li>
+</ul>
+<p>For this purpose, it relies on <a target="_blank" rel="noopener" href="https://github.com/socketio/engine.io">Engine.IO</a>,
+ which first establishes a long-polling connection, then tries to 
+upgrade to better transports that are “tested” on the side, like 
+WebSocket. Please see the <a target="_blank" rel="noopener" href="https://github.com/socketio/engine.io#goals">Goals</a> section for more information.</p>
+<h3 id="Auto-reconnection-support"><a href="#Auto-reconnection-support" class="headerlink" title="Auto-reconnection support"></a>Auto-reconnection support</h3><p>Unless
+ instructed otherwise a disconnected client will try to reconnect 
+forever, until the server is available again. Please see the available 
+reconnection options <a href="https://socket.io/docs/v3/client-api/#new-Manager-url-options">here</a>.</p>
+<h3 id="Disconnection-detection"><a href="#Disconnection-detection" class="headerlink" title="Disconnection detection"></a>Disconnection detection</h3><p>A
+ heartbeat mechanism is implemented at the Engine.IO level, allowing 
+both the server and the client to know when the other one is not 
+responding anymore.</p>
+<p>That functionality is achieved with timers set on both the server and
+ the client, with timeout values (the pingInterval and pingTimeout 
+parameters) shared during the connection handshake. Those timers require
+ any subsequent client calls to be directed to the same server, hence 
+the sticky-session requirement when using multiples nodes.</p>
+<h3 id="Binary-support"><a href="#Binary-support" class="headerlink" title="Binary support"></a>Binary support</h3><p>Any serializable data structures can be emitted, including:</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a> and <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/Blob">Blob</a> in the browser</li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a> and <a target="_blank" rel="noopener" href="https://nodejs.org/api/buffer.html">Buffer</a> in Node.js</li>
+</ul>
+<h3 id="Multiplexing-support"><a href="#Multiplexing-support" class="headerlink" title="Multiplexing support"></a>Multiplexing support</h3><p>In
+ order to create separation of concerns within your application (for 
+example per module, or based on permissions), Socket.IO allows you to 
+create several <a href="https://socket.io/docs/v3/namespaces">Namespaces</a>, which will act as separate communication channels but will share the same underlying connection.</p>
+
+
+  
+  <footer class="article-footer">
+    Caught a mistake? Edit this page on <a href="https://github.com/socketio/socket.io-website/blob/master/source/docs/v3/index.md" target="_blank" class="link">GitHub</a>
+  </footer>
+  
+</article>
+
+    </div>
+    <nav id="mobile-nav">
+  
+</nav>
+    
+
+<script src="index_files/jquery.js"></script>
+
+<!-- Algolia DocSearch -->
+<script type="text/javascript" src="index_files/docsearch.js"></script>
+<script type="text/javascript"> docsearch({
+  apiKey: '58123f8fe0926bd32287730dbc483f6d',
+  indexName: 'socket_io',
+  inputSelector: '#docsearch-input',
+  debug: true  // Set debug to true if you want to inspect the dropdown
+});
+</script>
+
+
+
+  </div>
+
+
+</body></html>

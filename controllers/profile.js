@@ -27,13 +27,14 @@ exports.myProfile = async(req, res) => {
                     skills: JSON.parse(user.skills),
                     
                 },
+                isLoggedIn: req.session.isLoggedIn,
                 projectsNumber: projects.length,
                 projs:projects,
                 pubs: pubs
             })
         })
-        
     })
+
     .catch(err => {
         console.log(err)
     })
@@ -115,6 +116,7 @@ exports.updateProfile = (req , res)=>{
                 id:user.id,
                 skills : JSON.parse(user.skills)
             },
+            isLoggedIn: req.session.isLoggedIn,
         })
     }
 

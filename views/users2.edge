@@ -1,0 +1,45 @@
+    
+<html>
+    <head>
+        <link rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css'>
+
+    </head>
+    <body>
+        @include('includes.layout')
+       <h3>HELLO</h3>
+       <span style="color:#00db2">{{name}}</span>
+
+       <form>
+           <input id="name" type="hidden" value={{name}}>
+       </form>
+       <div id="container">
+       </div>
+    </body>
+    <script src='/socketfile/socket.io-1.7.3.js'></script>
+    <script src='http://code.jquery.com/jquery-1.11.1.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js'></script>
+    <script>
+    var socket = io();
+        var name = $('#name').val();
+        socket.emit('name', name);
+        socket.emit('getUsers');
+        socket.on('chat message', function(msg){
+          console.log("hrr")
+          var array = msg.split(':');
+          Materialize.toast('You got a message from '+ array[0], 4000);
+        })
+        socket.on('users', function(users){
+          console.log("got it");
+          console.log(users['liste']);
+          document.getElementById("container").innerHTML = '';
+          document.getElementById("container").innerHTML = '<center><h4>List of users</h4></center>';
+          for ( i in users['liste']){
+            if (i !== name) {
+                document.getElementById("container").innerHTML += "<center><h5><a href='/messenger2/"+i+'?receiver='+i+'&name='+name+"'>"+i+"</a></h5></center>";
+            }
+          }
+        })
+        </script>
+</html>
+
+      

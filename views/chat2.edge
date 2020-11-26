@@ -1,0 +1,238 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>msgs</title>
+    <meta name="description" content="Ela Admin - HTML5 Admin Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/sttl.css">
+    <link rel="stylesheet" href="/css/bola.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+</head>
+
+<body>
+
+
+  <header>
+
+
+
+
+      @include('includes.nav')
+
+
+              <div id="mobile__menu" class="overlay">
+                  <a class="close" onclick="closeNav()">&times;</a>
+                  <div class="overlay__content">
+                      <a href="#">home</a>
+                      <a href="#">Messages</a>
+                      <a href="#">Notifications</a>
+                      <a href="#">Profile</a>
+                      <div id="rolling_bar">
+                        <input class="colortypingg" type="text" id="txxt"  placeholder="search developer or project">
+                        <a href="#" id="bbtn">
+                          <h3><strong>|</strong></h3><i class="fas fa-search"></i>
+                        </a>
+
+                      </div>
+                  </div>
+              </div>
+              </header>
+
+
+
+
+<!-- hna nstf les cards hdok  -->
+<div class="content">
+
+  <div class="row">
+  <!-- cote gauche  -->
+    <div class="col-lg-9">
+        <div  class="row-lg-9">
+
+
+
+              <div class="container">
+              <div class="messaging">
+                    <div class="inbox_msg">
+                      <div class="inbox_people">
+                        <div id="Messaging" class="row">
+                          <div class="col-sm-8">
+                          <h5 class=" text-center"><strong>Messaging</strong></h5>
+                          </div>
+                          <div class="col-sm-2">
+                            <i class="far fa-envelope " style="font-size: 1.5em"; ></i>
+                          </div>
+                        </div>
+                        <hr width="100%" color="#707070"></hr>
+                        <div class="headind_srch">
+                          <div class="srch_bar">
+                            <div class="stylish-input-group">
+                              <input type="text" class="search-bar"  placeholder="Search" >
+                              <span class="input-group-addon">
+                              <button type="button"> <i class="fa fa-search" aria-hidden="true"></i> </button>
+                              </span> </div>
+                          </div>
+                        </div>
+                        <!-- tae contacte hdi  -->
+                        <div class="inbox_chat">
+                          <div class="chat_list active_chat">
+                            <div class="chat_people">
+                              <div class="chat_img"> <img src="/img/92550852_1075202919514395_6362945305440157696_n.jpg" alt="sunil"> </div>
+                              <div class="chat_ib">
+                                <h5>Belambri Samy <span class="chat_date">User type</span></h5>
+                                <p>Salam , cest a propos de votre projet esihub </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="chat_list">
+                            <div class="chat_people">
+                              <div class="chat_img"> <img src="/img/92550852_1075202919514395_6362945305440157696_n.jpg" alt="sunil"> </div>
+                              <div class="chat_ib">
+                                <h5>younes <span class="chat_date">User type</span></h5>
+                                <p>ydra  win wslna , Messages..</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="chat_list">
+                            <div class="chat_people">
+                              <div class="chat_img"> <img src="/img/92550852_1075202919514395_6362945305440157696_n.jpg" alt="sunil"> </div>
+                              <div class="chat_ib">
+                                <h5>aymen <span class="chat_date">User type</span></h5>
+                                <p>chlef ababa nktb ay haja ghir aela test brk bsh nchf wsh yaffiher mlih wla nn .</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                        <!-- tae duscu hdi  -->
+                      <div class="mesgs">
+                        <div class="coordonne_msg">
+                          <div class="chat_people">
+                            <div class="chat_img"> <img src="/img/92550852_1075202919514395_6362945305440157696_n.jpg" alt="sunil"> </div>
+                            <div class="chat_ib">
+                              <h5>Belambri Samy</h5>
+                              <span class="chat_date">User type</span>
+
+                            </div>
+                          </div>
+                        </div>
+                        <br>
+                          <hr width="100%" color="#707070" text-align:right;><hr>
+                        <div class="msg_history">
+                          <ul id="messages">
+                            <li>hello</li>
+                            <li>monaliza</li>
+                            @each(sgmsg in msg)
+                            <li>{{sgmsg.msgFrom}}:{{sgmsg.msg}}</li>
+                            @endeach
+                          </ul>
+                        </div>
+                        <div class="type_msg">
+                          <div class="input_msg_write">
+                            <form action=''>
+                              <input id="name" type="hidden" value= {{name}}>
+                              <input id="receiver" type="hidden" value={{receiver}}>
+                              <input id="m" type="text" autocomplete='off'>
+                              <button class="msg_send_btn1" type="submit"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+                              <button class="msg_send_btn2" type="button"><i class="fas fa-paperclip" aria-hidden="true"></i></button>
+                            </form>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+                  </div>
+                </div>
+          </div>
+
+  </div>
+  <!-- hna les pubs adroite -->
+
+  <div id="pubbb" class="col-lg -2.5">
+     <div class="row">
+       <div class="card">
+           <div id="pub11"  class="card-body">
+               <img   src="img\93052335_323808895254557_548217610005643264_n.jpg" alt="">
+
+           </div>
+       </div>
+     </div>
+
+     <div class="row">
+       <div class="card">
+           <div id="pub11" class="card-body">
+             <img   src="img\92738417_500278707517027_9190470847905660928_n.jpg" alt="">
+
+           </div>
+       </div>
+     </div>
+     <div class="row">
+       <div class="card">
+           <div id="pub11" class="card-body">
+             <img   src="img\92728715_247387743066197_1109854106593263616_n.jpg" alt="">
+
+           </div>
+       </div>
+     </div>
+     <div class="row">
+       <div class="card">
+           <div id="pub11" class="card-body">
+                <img   src="img\92226362_698728877620545_3772096491326275584_n.jpg" alt="">
+
+           </div>
+       </div>
+     </div>
+
+  </div>
+
+
+    </div>
+
+  </div>
+  <li></li>
+</ul>
+</div>
+
+
+<script src='/socketfile/socket.io-1.7.3.js'></script>
+<script src='http://code.jquery.com/jquery-1.11.1.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js'></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" charset="utf-8"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" charset="utf-8"></script>
+<script>    
+     var name = $('#name').val();
+      var receiver = $('#receiver').val();
+      console.log(name);
+      console.log(receiver);
+      var socket = io();
+  
+      socket.emit('name', name);
+  
+          socket.emit('receiver', receiver);
+  
+      $('form').submit(function(){
+        socket.emit('chat message', $('#m').val());
+        $('#m').val('');
+        return false;
+      });
+      socket.on('chat message', function(msg){
+        console.log(msg);
+        $('#messages').append($('<li>').text(msg));
+      });
+ </script>
+ <script>     
+</script>
+</body>

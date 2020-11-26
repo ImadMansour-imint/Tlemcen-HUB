@@ -32,8 +32,86 @@
 </head>
 
 <body>
-@include('includes.nav')
-<!-- hna nstf les cards hdok  -->
+  <header>
+
+
+    <nav  class="navbar navbar-expand-lg navbar-dark    ">
+  
+      <a class="navbar-brand " href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Logo-Univ_Tlemcen.png" alt="logo" id="nav-logo"   ></a>
+      <button onclick="openNav()" id="menuphone" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+  
+      <form id="research" action="/me" method="POST" class="form-inline d-flex justify-content-center md-form form-sm active-cyan active-cyan-2 mt-2">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div id="rolling_bar">
+          <input class="colortypingg" type="text" id="txxt" name="search" placeholder="search developer or project">
+          <a href="#" id="bbtn">
+            <h3><strong>|</strong></h3><i class="fas fa-search"></i>
+          </a>
+        </div>
+    </form>
+  
+        <ul class="navbar-nav mr-auto">
+          <li id="margli" class="nav-item">
+          </li>
+        </ul>
+        <ul id="margul1" class="navbar-nav mr-auto">
+  
+               <li>
+         <!-- Search form -->
+         <div id="research" >
+      <form id="research" class="form-inline d-flex justify-content-center md-form form-sm active-cyan active-cyan-2 mt-2">
+  
+        <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
+          aria-label="Search">
+          <i class="fas fa-search" aria-hidden="true"  style="color:white;"></i>
+      </form>
+       </div>
+  
+  
+               </li>
+          <li id="margli" class="nav-item active">
+            <a class="nav-link" href="/projects"><strong>Home</strong> <span class="sr-only">(current)</span></a>
+          </li>
+          <li id="margli" class="nav-item active">
+            <a class="nav-link" href="/messenger3/users?name={{profile.name}}"><strong>Messagerie</strong> <span class="sr-only">(current)</span></a>
+          </li>
+          <li id="margli" class="nav-item active">
+            <a class="nav-link" href="/notifications"><strong>Notifications</strong> <span class="sr-only">(current)</span></a>
+          </li>
+          <li id="margli" class="nav-item active">
+            <a class="nav-link" href="/me"><strong>Profile</strong> <span class="sr-only">(current)</span></a>
+          </li>
+          <li id="logoutt">
+            <a href="/auth/logout">log out</a>
+          </li>
+          <!-- hna tae deconnexion logout -->
+          <li>
+            <div id="drop" class="dropdown">
+  
+                <a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown"></a>
+                <div id="drop2"  class="dropdown-menu">
+  
+                    <a href="/auth/logout" class="dropdown-item">Log out</a>
+                </div>
+            </div>
+          </li>
+  
+        </ul>
+        <ul id="margul2" class="navbar-nav mr-auto">
+          <li id="margli2" class="nav-item">
+            <img class="nav-link" href="#" id="imgbuff" src="/img/icon_buffer-512.png" alt="icon_buffer-512.png">
+          </li>
+          <li id="margli22" class="nav-item">
+            <a class="nav-link" href="/connectedSearch"><strong>projects &</br>developers</strong>  </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+            </header>
+   <!-- hna nstf les cards hdok  -->
 <div class="content">
   <!-- cote gauche  -->
   <div class="row">
