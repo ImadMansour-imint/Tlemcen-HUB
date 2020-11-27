@@ -86,7 +86,8 @@
                           </div>
                         </div>
                         <!-- tae contacte hdi  -->
-                        <div class="inbox_chat">
+                        <div class="inbox_chat" >    
+                          <div class="chat_list" id="container"></div>                   
                           <div class="chat_list active_chat">
                             <div class="chat_people">
                               <div class="chat_img"> <img src="/img/92550852_1075202919514395_6362945305440157696_n.jpg" alt="sunil"> </div>
@@ -195,12 +196,10 @@
            </div>
        </div>
      </div>
-
   </div>
-
-
+<ul id="users" style="display: none">
+</ul>
     </div>
-
   </div>
   <li></li>
 </ul>
@@ -233,6 +232,28 @@
         $('#messages').append($('<li>').text(msg));
       });
  </script>
- <script>     
-</script>
+ <script> 
+     var socket = io();
+        var name = $('#name').val();
+        socket.emit('name', name);
+        socket.emit('getUsers');
+        socket.on('chat message', function(msg){
+          console.log("hrr")
+          var array = msg.split(':');
+          Materialize.toast('You got a message from '+ array[0], 4000);
+        })
+        socket.on('users', function(users){
+          console.log("got it");
+          console.log(users['liste']);
+          console.log(document.getElementById("users"));
+          document.getElementById("container").innerHTML = '';
+          for ( i in users['liste']){
+            if (i !== name) {
+                {
+                document.getElementById("container").innerHTML +=  "<a href='/messenger2/"+i+'?receiver='+i+'&name='+name+"'><div class='chat_people'><div class='chat_img'> <img src='/img/92550852_1075202919514395_6362945305440157696_n.jpg' alt='sunil'> </div><div class='chat_ib'><h5>"+i+"</h5></div></div></a>";
+}
+       }
+          }
+        })    
+</script> 
 </body>

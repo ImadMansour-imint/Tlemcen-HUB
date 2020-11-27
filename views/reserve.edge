@@ -1,0 +1,36 @@
+var name = $('#name').val();
+var receiver = $('#receiver').val();
+console.log(name);
+console.log(receiver);
+var socket = io();
+
+socket.emit('name', name);
+
+    socket.emit('receiver', receiver);
+
+$('form').submit(function(){
+  socket.emit('chat message', $('#m').val());
+  $('#m').val('');
+  return false;
+});
+socket.on('chat message', function(msg){
+  console.log(msg);
+  $('#messages').append($('<li>').text(msg));
+});
+    socket.emit('getUsers');
+    socket.on('chat message', function(msg){
+      console.log("hrr")
+      var array = msg.split(':');
+      Materialize.toast('You got a message from '+ array[0], 4000);
+    })
+    socket.on('users', function(users){
+      console.log("got it");
+      console.log(users['liste']);
+      document.getElementById("inbox_chat").innerHTML = '';
+      document.getElementById("inbox_chat").innerHTML = '<center><h4>List of users</h4></center>';
+      for ( i in users['liste']){
+        if (i !== name) {
+            document.getElementById("inbox_chat").innerHTML += "<div class='chat_people'><div class='chat_img'> <img src='/img/92550852_1075202919514395_6362945305440157696_n.jpg' alt='sunil'> </div><div class='chat_ib'><h5>"i"<span class='chat_date'>User type</span></h5></div></div>";
+        }
+      }
+    })

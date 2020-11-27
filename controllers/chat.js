@@ -50,16 +50,19 @@ exports.chatMsg =  (req, res, next) => {
   sess.name =  req.query.name;
    const  receiver  =  req.query.receiver;
 if(req.query.receiver && req.query.name ){
+  console.log("block");
   Chat.findAll({
     where: {
-      [Op.or]: [{msgTo: req.query.receiver}, {msgTo: req.query.name},{msgFrom: req.query.receiver}, {msgFrom: req.query.name}]
+      [Op.or]: [[{msgTo: req.query.receiver}, {msgFrom: req.query.name}],[{msgTo: req.query.name},{msgFrom: req.query.receiver}]],
     },
-    limit: 10, order: [['createdAt', 'DESC']]
+    limit: 30, order: [['createdAt', 'DESC']]
   }).then(
     messages=>
     res.render('chat2', {title: "Chat with " + receiver, name:sess.name , receiver: receiver,msg:messages })
   )
   }
+  else
+  res.render('chat2', {title: "Chat with " + receiver, name:sess.name  })
   // res.render('chat2', {title: "Chat with " + receiver, name:sess.name , receiver: receiver})
 
 };

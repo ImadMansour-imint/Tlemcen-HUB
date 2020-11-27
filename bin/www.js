@@ -7,6 +7,7 @@ var Chat = require('../models/Chat.js')
 var app = require('../app');
 var debug = require('debug')('untitled1:server');
 var http = require('http');
+const { log } = require('console');
 
 
 
@@ -91,10 +92,6 @@ function onListening() {
   debug('Listening on ' + bind);
 }
 
-function returnname(name){
-  return name
-};
-
 var names = new Object();
 var ids = new Object();
 var receivers = new Object();
@@ -105,8 +102,10 @@ io.on('connection', function(socket){
 
   socket.on('name', function(name){
    names[socket.id]= name;
-   returnname(name);
+   console.log(name + "name");
    ids[name] = socket.id;
+   console.log(socket.id + "id");
+   console.log(names[socket.id]);
       socket.broadcast.emit('users',{ liste: ids });
   });
   socket.on ('receiver', function(receiver){
