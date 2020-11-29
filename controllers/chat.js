@@ -49,24 +49,59 @@ exports.chatMsg =  (req, res, next) => {
   const sess =   req.session;
   sess.name =  req.query.name;
    const  receiver  =  req.query.receiver;
+
 if(req.query.receiver && req.query.name ){
-  console.log("block");
   Chat.findAll({
     where: {
       [Op.or]: [[{msgTo: req.query.receiver}, {msgFrom: req.query.name}],[{msgTo: req.query.name},{msgFrom: req.query.receiver}]],
     },
-    limit: 30, order: [['createdAt', 'DESC']]
+    limit: 130, order: [['createdAt', 'DESC']]
   }).then(
-    messages=>
-    res.render('chat2', {title: "Chat with " + receiver, name:sess.name , receiver: receiver,msg:messages })
+    messages=>{
+          Chat.findAll({
+        where: {
+          [Op.or]: [{msgTo: req.query.name}, {msgFrom: req.query.name}],
+        },
+        limit: 10,
+      }).then(all =>{
+        var tab = [];
+          all.forEach(element => {
+            if(element.msgTo == req.query.name)
+            tab.push(element.msgFrom);
+         else tab.push(element.msgTo)
+        
+        });
+        let uniqueTab = [...new Set(tab)];
+        res.render('chat2', {title: "Chat with " + receiver, name:sess.name , receiver: receiver,msg:messages ,allusers:uniqueTab })
+
+      }
+      ).catch(err=>console.log(err))
+    }
   )
   }
-  else
-  res.render('chat2', {title: "Chat with " + receiver, name:sess.name  })
+  else{
+     Chat.findAll({
+      where: {
+        [Op.or]: [{msgTo: req.query.name}, {msgFrom: req.query.name}],
+      },
+      limit: 30, order: [['createdAt', 'DESC']]
+    }).then(all =>{
+      var tab = [];
+        all.forEach(element => {
+          if(element.msgTo == req.query.name)
+             tab.push(element.msgFrom);
+          else tab.push(element.msgTo)
+            })
+            let uniqueTab = [...new Set(tab)];
+            res.render('chat2', {title: "Chat with ", name:sess.name ,allusers:uniqueTab })
+   
+            
+
+  }).catch(err=>console.log(err))
   // res.render('chat2', {title: "Chat with " + receiver, name:sess.name , receiver: receiver})
 
 };
-
+}
 exports.userMsg = (req, res, next) => {
   var sess = req.session;
   sess.name = req.query.name;

@@ -86,17 +86,9 @@
                           </div>
                         </div>
                         <!-- tae contacte hdi  -->
-                        <div class="inbox_chat" >    
-                          <div class="chat_list" id="container"></div>                   
-                          <div class="chat_list active_chat">
-                            <div class="chat_people">
-                              <div class="chat_img"> <img src="/img/92550852_1075202919514395_6362945305440157696_n.jpg" alt="sunil"> </div>
-                              <div class="chat_ib">
-                                <h5>Belambri Samy <span class="chat_date">User type</span></h5>
-                                <p>Salam , cest a propos de votre projet esihub </p>
-                              </div>
-                            </div>
-                          </div>
+                        <div class="inbox_chat">
+                          <div id="container"></div>    
+                          <div class="chat_list" ></div> 
                           <div class="chat_list">
                             <div class="chat_people">
                               <div class="chat_img"> <img src="/img/92550852_1075202919514395_6362945305440157696_n.jpg" alt="sunil"> </div>
@@ -106,17 +98,22 @@
                               </div>
                             </div>
                           </div>
-                          <div class="chat_list">
+                          @each(user in  allusers)
+                          <div class="chat_list active_chat">
+                            <a href="/messenger2/{{name}}?receiver={{user}}&name={{name}}">
                             <div class="chat_people">
                               <div class="chat_img"> <img src="/img/92550852_1075202919514395_6362945305440157696_n.jpg" alt="sunil"> </div>
                               <div class="chat_ib">
-                                <h5>aymen <span class="chat_date">User type</span></h5>
-                                <p>chlef ababa nktb ay haja ghir aela test brk bsh nchf wsh yaffiher mlih wla nn .</p>
+                                <h5>{{user}}</h5>
                               </div>
                             </div>
+                            </a>
                           </div>
+                          @endeach
                         </div>
+ 
                       </div>
+
                         <!-- tae duscu hdi  -->
                       <div class="mesgs">
                         <div class="coordonne_msg">
@@ -197,11 +194,8 @@
        </div>
      </div>
   </div>
-<ul id="users" style="display: none">
-</ul>
-    </div>
-  </div>
-  <li></li>
+<ul id="users" style="display: none"></ul>
+
 </ul>
 </div>
 
@@ -231,14 +225,9 @@
         console.log(msg);
         $('#messages').append($('<li>').text(msg));
       });
- </script>
- <script> 
-     var socket = io();
-        var name = $('#name').val();
-        socket.emit('name', name);
-        socket.emit('getUsers');
+      ////////////////
+      socket.emit('getUsers');
         socket.on('chat message', function(msg){
-          console.log("hrr")
           var array = msg.split(':');
           Materialize.toast('You got a message from '+ array[0], 4000);
         })
@@ -250,10 +239,34 @@
           for ( i in users['liste']){
             if (i !== name) {
                 {
-                document.getElementById("container").innerHTML +=  "<a href='/messenger2/"+i+'?receiver='+i+'&name='+name+"'><div class='chat_people'><div class='chat_img'> <img src='/img/92550852_1075202919514395_6362945305440157696_n.jpg' alt='sunil'> </div><div class='chat_ib'><h5>"+i+"</h5></div></div></a>";
+                document.getElementById("container").innerHTML +=  "<a href='/messenger2/"+i+'?receiver='+i+'&name='+name+"'><div class='chat_list active_chat'><div class='chat_people'><div class='chat_img'> <img src='/img/92550852_1075202919514395_6362945305440157696_n.jpg' alt='sunil'> </div><div class='chat_ib'><h5>"+i+"</h5></div></div></div></a>";
 }
        }
           }
         })    
+ </script>
+ <script> 
+//      var socket = io();
+//         var name = $('#name').val();
+//         socket.emit('name', name);
+//         socket.emit('getUsers');
+//         socket.on('chat message', function(msg){
+//           console.log("hrr")
+//           var array = msg.split(':');
+//           Materialize.toast('You got a message from '+ array[0], 4000);
+//         })
+//         socket.on('users', function(users){
+//           console.log("got it");
+//           console.log(users['liste']);
+//           console.log(document.getElementById("users"));
+//           document.getElementById("container").innerHTML = '';
+//           for ( i in users['liste']){
+//             if (i !== name) {
+//                 {
+//                 document.getElementById("container").innerHTML +=  "<a href='/messenger2/"+i+'?receiver='+i+'&name='+name+"'><div class='chat_people'><div class='chat_img'> <img src='/img/92550852_1075202919514395_6362945305440157696_n.jpg' alt='sunil'> </div><div class='chat_ib'><h5>"+i+"</h5></div></div></a>";
+// }
+//        }
+//           }
+//         })    
 </script> 
 </body>
