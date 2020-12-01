@@ -5,7 +5,7 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
 <head>
-
+  
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <meta charset="utf-8">
@@ -15,23 +15,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
+   
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="/css/cssmyprofil.css">
     <link rel="stylesheet" type="text/css" href="/css/projectPost0.css">
     <link rel="stylesheet" type="text/css" href="/css/nav.css">
-    <link rel="stylesheet" href="/css/cssmyprofil.css">
-    <link rel="stylesheet" type="text/css" href="css/projectPost.css">
-
+   
     <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
 
 
 </head>
 
 <body>
-  @include('includes.nav')
-<!-- hna nstf les cards hdok  -->
+  <header>
+
+
+    <nav  class="navbar navbar-expand-lg navbar-dark    ">
+  
+      <a class="navbar-brand " href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Logo-Univ_Tlemcen.png" alt="logo" id="nav-logo"   ></a>
+      <button onclick="openNav()" id="menuphone" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+  
+      <form id="research" action="/me" method="POST" class="form-inline d-flex justify-content-center md-form form-sm active-cyan active-cyan-2 mt-2">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div id="rolling_bar">
+          <input class="colortypingg" type="text" id="txxt" name="search" placeholder="search developer or project">
+          <a href="#" id="bbtn">
+            <h3><strong>|</strong></h3><i class="fas fa-search"></i>
+          </a>
+        </div>
+    </form>
+  
+        <ul class="navbar-nav mr-auto">
+          <li id="margli" class="nav-item">
+          </li>
+        </ul>
+        <ul id="margul1" class="navbar-nav mr-auto">
+  
+               <li>
+         <!-- Search form -->
+         <div id="research" >
+      <form id="research" class="form-inline d-flex justify-content-center md-form form-sm active-cyan active-cyan-2 mt-2">
+  
+        <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
+          aria-label="Search">
+          <i class="fas fa-search" aria-hidden="true"  style="color:white;"></i>
+      </form>
+       </div>
+  
+  
+               </li>
+          <li id="margli" class="nav-item active">
+            <a class="nav-link" href="/projects"><strong>Home</strong> <span class="sr-only">(current)</span></a>
+          </li>
+          <!--  <li id="margli" class="nav-item active">
+            <a class="nav-link" href="/messenger3/users?name={{profile.name}}"><strong>Messagerie</strong> <span class="sr-only">(current)</span></a>
+          </li> --> 
+          <li id="margli" class="nav-item active">
+            <a class="nav-link" href="/messenger2/{{profile.name}}?name={{profile.name}}"><strong>Messagerie</strong> <span class="sr-only">(current)</span></a>
+          </li>
+          <li id="margli" class="nav-item active">
+            <a class="nav-link" href="/notifications"><strong>Notifications</strong> <span class="sr-only">(current)</span></a>
+          </li>
+          <li id="margli" class="nav-item active">
+            <a class="nav-link" href="/me"><strong>Profile</strong> <span class="sr-only">(current)</span></a>
+          </li>
+          <li id="logoutt">
+            <a href="/auth/logout">log out</a>
+          </li>
+          <!-- hna tae deconnexion logout -->
+          <li>
+            <div id="drop" class="dropdown">
+  
+                <a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown"></a>
+                <div id="drop2"  class="dropdown-menu">
+  
+                    <a href="/auth/logout" class="dropdown-item">Log out</a>
+                </div>
+            </div>
+          </li>
+  
+        </ul>
+        <ul id="margul2" class="navbar-nav mr-auto">
+          <li id="margli2" class="nav-item">
+            <img class="nav-link" href="#" id="imgbuff" src="/img/icon_buffer-512.png" alt="icon_buffer-512.png">
+          </li>
+          <li id="margli22" class="nav-item">
+            <a class="nav-link" href="/connectedSearch"><strong>projects &</br>developers</strong>  </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+     </header>
+  <!-- hna nstf les cards hdok  -->
 <div class="content">
   <!-- cote gauche  -->
   <div class="row">
@@ -42,7 +125,7 @@
             <div class="card-body">
               <!-- tof de couverture hna -->
                 <div id="imgcvrt" >
-                <img src="/img/92676683_572773460252956_6405308169903407104_n.jpg " alt="">
+                <img id="profile-image" src="/img/92676683_572773460252956_6405308169903407104_n.jpg" alt="">
 
 
               </div>
@@ -58,7 +141,7 @@
 
 
                                     <div class="custom-file">
-                                      <img id="blah" src={{profile.avatar}} alt="" />
+                                      <img id="blah" src="{{profile.avatar}}" alt="" />
                                     <i class="fas fa-camera"></i>
 
 
@@ -79,16 +162,18 @@
                 <div class="row">
                   <div class="col-8">
                   <h3><strong>{{ profile.name }}</strong></h3>
-                  <h4>{{profile.bio}}</h4>
+                  <h4>{{profile.bio || " "}}</h4>
 
                   <button type="button" class="btn btn-link" ><a onclick="document.getElementById('modal-wrapper01').style.display='block'"
                       data-toggle="modal"
                       data-target="#signin"><strong>Contacts</strong></a></button>
 
                    </div>
-                  
+
+                  <a id="aedit" data-toggle="modal"
+                  data-target="#signin" onclick="document.getElementById('modal-wrapper00').style.display='block'"  href="#"  class="btn btn-lg btn-info" disabled><strong>Send Message</strong></a>
                   <div id='numps' class="col-md-4">
-                  <strong> {{projectsNumber}} project  13 skills</strong>
+                  <strong> {{projectsNumber || 0}} project  {{profile.skills.length}} skills</strong>
                   </div>
 
 
@@ -110,13 +195,14 @@
 
                 <hr width="100%" color="#707070"></hr>
 
-              
-              </br>  </br>
-
 
                  <ol class="v">
                    @each(skill in profile.skills)
-                   <li><i id="nike" class="fas fa-check-square"></i> {{skill}}</li>
+                   <li onmouseout="hidetrash('{{$loop.index}}')"  onmouseover="showtrash('{{$loop.index}}')" style="cursor:pointer" >
+                    <i id="nike" class="fas fa-check-square " ></i>
+                     {{skill}} 
+                    &nbsp;&nbsp;&nbsp;
+                    </li>
                    @endeach
 
                  </ol>
@@ -131,10 +217,6 @@
 <!-- hna tae button projet ... -->
 
           <div class="col-md-8">
-                     
-
-                    </br>
-
 <!-- hna tae projet ... -->
 
          <div class="row ">
@@ -167,13 +249,7 @@
                   <ul class="right">
                       <li><button onclick="addLike(this)" class="btn btn-link"><i class="fa fa-thumbs-up" aria-hidden="true" style="font-size:150%;"></i></button></li>
                   <li><a href='/add-comment/{{project.id}}'>Comment</a></li>
-                      <li class="ratting-wrapper">
-                          <input type="radio" name="rating" id="star-1" value="1" onclick="addRating(this)"><label for="star-1"></label>
-                          <input type="radio" name="rating" id="star-2" value="2" onclick="addRating(this)"><label for="star-2"></label>
-                          <input type="radio" name="rating" id="star-3" value="3" onclick="addRating(this)"><label for="star-3"></label>
-                          <input type="radio" name="rating" id="star-4" value="4" onclick="addRating(this)"><label for="star-4"></label>
-                          <input type="radio" name="rating" id="star-5" value="5" onclick="addRating(this)"><label for="star-5"></label>
-                      </li>
+                   
                       <li  class="left"><a href='/projects/{{project.id}}'>Details</a></li>
                   </ul>
 
@@ -201,45 +277,19 @@
     </div>
 
 
-<!-- cote droit li fih hdok tae mlh w hack day  -->
+<!-- cote droit li fih hdok tae mlh w hack d -->
+<div id="pubbb" class="col-md-2">
+  @each(pub in pubs)
+   <div class="row">
+     <div class="card">
+         <div id="pub11"  class="card-body">
+         <img   src="{{pub.imagePath}}" alt="">
 
-    <div id="pubbb" class="col-md-2">
-       <div class="row">
-         <div class="card">
-             <div id="pub11"  class="card-body">
-                 <img   src="/img/93052335_323808895254557_548217610005643264_n.jpg" alt="">
-
-             </div>
          </div>
-       </div>
-
-       <div class="row">
-         <div class="card">
-             <div id="pub11" class="card-body">
-               <img   src="/img/92738417_500278707517027_9190470847905660928_n.jpg" alt="">
-
-             </div>
-         </div>
-       </div>
-       <div class="row">
-         <div class="card">
-             <div id="pub11" class="card-body">
-               <img   src="/img/92728715_247387743066197_1109854106593263616_n.jpg" alt="">
-
-             </div>
-         </div>
-       </div>
-       <div class="row">
-         <div class="card">
-             <div id="pub11" class="card-body">
-                  <img   src="/img/92226362_698728877620545_3772096491326275584_n.jpg" alt="">
-
-             </div>
-         </div>
-       </div>
-
-    </div>
-
+     </div>
+   </div>
+   @endeach
+</div>
   </div>
 
 </div>
@@ -283,7 +333,7 @@
               </div>
               <div id="tofsgh" class="col ">
 
-                <a id="link" href={{profile.github}} target="_blank"> <strong>github</strong></a>
+                <a id="link" href={{profile.github}} target="_blank"> <strong> nbp github</strong></a>
               </div>
               </div>
 
@@ -305,7 +355,28 @@
 
         </div>
 
+<!--hna send messages-->
 
+<div id="modal-wrapper00"  class="modal">
+
+<form id="form00" class="modal-content2 animate" action="/profile?id={{profile.id}}&receiver={{profile.name}}" method="POST">
+
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('modal-wrapper00').style.display='none'" class="close" title="Close PopUp">&times;</span>
+
+    </div>
+       <h3><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{ profile.name }}</strong></h3>
+   <hr width="80%" color="#707070">
+   <input type="text" name="msg" class="inputMessage" placeholder="write your message">
+
+
+
+  </form>
+
+</div>
+
+
+<!--hna tkmel t3 messages-->
 
 
         <div  id="modal-wrapperskills"  class="modal">
@@ -339,7 +410,7 @@
     </div>
     <div class="col" id="svcsl">
       <input type="submit" value="SAVE" class="btn btn-round secondary-button save" >
-      <button class="btn btn-round cancel" type="button" onclick="cancel_exp(this)">Cancel</button>
+      <button class="btn btn-round cancel" type="button" onclick="document.getElementById('modal-wrapperskills').style.display='none'">Cancel</button>
     </div>
   </div>
 </div>
@@ -353,7 +424,7 @@
 
 
 
-        <!-- hna ybda tae edit profile t9wdt -->
+        <!-- hna ybda tae edit profile  -->
 
         <div id="modal-wrapperedit"  class="modal" >
 
@@ -393,8 +464,8 @@
                     </div>
                     <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
                       <div class="text-center text-sm-left mb-2 mb-sm-0">
-                        <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">Belambri samy</h4>
-                        <p class="mb-0">samy@esi-sba.dz</p>
+                        <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">{{ profile.name }}</h4>
+                        <p class="mb-0">{{profile.email}}</p>
                       </div>
                     </div>
                       </div>
@@ -404,7 +475,7 @@
                                   <div class="col">
                                     <div class="form-group">
                                       <label>user Name</label>
-                                      <input class="form-control" type="text" name="name" placeholder="Samy belambri" value={{profile.name}}>
+                                      <input class="form-control" type="text" name="name"  value={{profile.name}}>
                                     </div>
                                   </div>
 
@@ -422,6 +493,7 @@
                                   <div class="col">
                                     <div class="form-group">
                                       <label>github</label>
+                                      &nbsp; &nbsp; 
                                       <input class="form-control" type="text" value={{ profile.github || 'github'}} name="github">
                                     </div>
                                   </div>
@@ -429,7 +501,7 @@
                                 <div class="row">
                                   <div class="col">
                                     <div class="form-group">
-                                      <label>linkedin</label>
+                                      <label>linkedin</label>&nbsp; 
                                       <input class="form-control" type="text" value={{ profile.linkedin || 'linkedin' }} name="linkedin">
                                     </div>
                                   </div>
@@ -475,6 +547,21 @@
 <script type="text/javascript" src="/js/mobile.js"></script>
 <script src="/js/async.js"></script>
 <script >
+//delete 
+function showtrash(node){
+  node = node.toString()
+  var element = document.getElementById(node);
+  element.classList.remove("delete_skill")
+  element.classList.add("delete_skill2")
+}
+
+function hidetrash(node2){
+  node2 = node2.toString()
+  var element = document.getElementById(node2);
+  element.classList.add("delete_skill")
+  element.classList.remove("delete_skill2")
+
+}
 
 // hna tae timporter tof de profil
 
@@ -520,6 +607,12 @@ window.onclick = function(event) {
 //hda scripte tae coordonne
 
 var modal = document.getElementById('modal-wrapper01');
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = " none";
+    }
+}
+var modal = document.getElementById('modal-wrapper00');
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = " none";

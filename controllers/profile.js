@@ -11,6 +11,7 @@ const Op = sequelize.Op
 exports.myProfile = async(req, res) => {
     const id = req.session._id
     const user = await User.findOne({where : {id : id}})
+    req.session.name=user.userName
     user.getProjects()
     .then(projects => {
         return Pub.findAll({where:{added: true}}).then(pubs => {

@@ -68,14 +68,14 @@
                   </div>
                   <div id="content2">
                     <div class="row">
-                     <h5 id="prjtxt"><strong>{{notification.notifier}} &nbsp;&nbsp;&nbsp;&nbsp;</strong></h5>
+                     <h5 id="prjtxt"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{notification.notifier}} &nbsp;&nbsp;&nbsp;&nbsp;</strong></h5>
                      <p>commented on your project "{{notification.projectTitle}}"</p>
                     </div>
                     <p></p>
                 </div>
               </div>
-              <h5> <small id="prjtxt2"><strong> User type</strong></small></h5>
-              <h5> <small id="prjtxt3"><strong> 13 hour ago</strong></small></h5>
+              <h5> <small id="prjtxt2"><strong></strong></small></h5>
+              <h5> <small id="prjtxt3"><strong> {{notification.date}} </strong></small></h5>
             </div>
           </div>
           @elseif(notification.type === 'like')
@@ -88,13 +88,13 @@
 
                   <div id="content2" >
                       <div class="row">
-                     <h5 id="prjtxt"><strong>{{notification.notifier}} &nbsp;&nbsp;&nbsp;&nbsp;</strong></h5>
+                     <h5 id="prjtxt"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{notification.notifier}} &nbsp;&nbsp;&nbsp;&nbsp;</strong></h5>
                       <p>liked your project "{{notification.projectTitle}}" </p>
                       </div>
                   </div>
                 </div>
-              <h5> <small id="prjtxt2"><strong> User type</strong></small></h5>
-              <h5> <small id="prjtxt3"><strong> 13 hour ago</strong></small></h5>
+              <h5> <small id="prjtxt2"><strong></strong></small></h5>
+              <h5> <small id="prjtxt3"><strong>  {{notification.date}}</strong></small></h5>
             </div>
           </div>
           @elseif(notification.type === 'rating')

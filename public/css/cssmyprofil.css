@@ -68,7 +68,7 @@ img {
 
 
         input[type=text], input[type=password],input[type=date],input[type=tel] {
-            width: 42%;
+            width: 90%;
             padding: 10px 20px;
             margin: 8px 26px;
             color: #2699FB;
@@ -136,7 +136,26 @@ img {
             height: 75%;
           padding-bottom: 30px;
         }
-
+        .modal-content2 {
+          border-radius: 14px 14px 14px 14px;
+        -moz-border-radius: 14px 14px 14px 14px;
+        -webkit-border-radius: 14px 14px 14px 14px;
+        border: 0px solid #000000;
+            background-color: #fefefe;
+            margin: 4% auto 15% auto;
+            margin-top: 70px;
+            border: 1px solid #888;
+            height: 45%;
+            width: 45%;
+          padding-bottom: 30px;
+          position: relative;
+        }
+        .inputMessage{
+          height: 45%;
+          border: 1px solid #000000;
+          width: 100%; 
+          position: absolute;       
+        }
         /* The Close Button (x) */
         .close {
             position: absolute;

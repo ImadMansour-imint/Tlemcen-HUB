@@ -1,208 +1,794 @@
-
-#numps{
-  text-align: right;
-  left: 65%;
-  color: #989898;
-}
-#btnedit{
-  left: 10%;
-}
-#btnskills{
-  margin-left: 15%;
-}
-
-.close2 {
-    position: absolute;
-    right: 25px;
-    top: 0;
-    color: green;
-    font-size: 35px;
-    font-weight: bold;
-}
-.close2:hover,.close2:focus {
-    color: green;
-    cursor: pointer;
-}
-
-#modal-wrapperskills{
-  margin: 0 auto;
-  width: 80%;
+#aedit{
+  width: 15%;
   height: 100%;
-  text-align: center;
-  top: 30px;
-  background-color: transparent;
+}
 
+#link{
+  margin-left: 10%;
+}
+
+#srchsv{
+  bottom: 2px;
+  position: absolute;
 
 }
-#rechskills{
 
-  right: 18%;
+#sk{
+  list-style-type: none;
+  position: block;
+  float: left;
 }
+
+#svcsl{
+  left:550px;
+   position:absolute;
+}
+
+img {
+  max-width: 100%;
+}
+
+.delete_skill{
+  display: none;
+}
+.delete_skill2{
+  display: inline;
+  color:red;
+}
+  .content {
+    float: left;
+    padding: 1.875em;
+    width: 100%; }
+
+      .card {
+        margin-bottom: 1.875em;
+        border-radius: 5px;
+        padding: 0;
+
+
+        }
+
+
+
+        /* css coordonee */
+
+        /* hda tae coordonees taille tae form */
+
+        #form01{
+          width:50%;
+          height:60%;
+
+          top:-3%;
+
+        }
+        /*  */
+
+
+        /* Full-width input fields */
+
+
+        input[type=text], input[type=password],input[type=date],input[type=tel] {
+            width: 42%;
+            padding: 10px 20px;
+            margin: 8px 26px;
+            color: #2699FB;
+            display: inline-block;
+            border:none;
+            border-bottom: 1px solid #2699FB;
+            outline: none;
+            background: transparent;
+            box-sizing: border-box;
+          font-size:16px;
+        }
+
+        ::placeholder {
+        color: #BCE0FD;
+
+        }
+
+
+         input:focus::-webkit-input-placeholder {
+        color: #BCE0FD;
+        }
+
+
+        /* Set a style for all buttons */
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        /* Center the image and position the close button */
+        .imgcontainer {
+            text-align: center;
+            margin: 24px 0 12px 0;
+            position: relative;
+        }
+
+
+        /* The Modal (background) */
+
+
+        .modal{
+          display:none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+
+        }
+
+        /* Modal Content Box */
+        .modal-content {
+          border-radius: 14px 14px 14px 14px;
+        -moz-border-radius: 14px 14px 14px 14px;
+        -webkit-border-radius: 14px 14px 14px 14px;
+        border: 0px solid #000000;
+            background-color: #fefefe;
+            margin: 4% auto 15% auto;
+            margin-top: 70px;
+            border: 1px solid #888;
+            width: 90%;
+            height: 75%;
+          padding-bottom: 30px;
+        }
+
+        /* The Close Button (x) */
+        .close {
+            position: absolute;
+            right: 25px;
+            top: 0;
+            color: #000;
+            font-size: 35px;
+            font-weight: bold;
+        }
+        .close:hover,.close:focus {
+            color: red;
+            cursor: pointer;
+        }
+
+        /* Add Zoom Animation */
+        .animate {
+            animation: zoom 0.6s
+        }
+        @keyframes zoom {
+            from {transform: scale(0)}
+            to {transform: scale(1)}
+        }
+        #btnmm{margin-left: 500px;
+          margin-top: -10%;
+          border-radius: 109px 109px 109px 109px;
+        -moz-border-radius: 109px 109px 109px 109px;
+        -webkit-border-radius: 109px 109px 109px 109px;
+        border: 0px solid #000000;
+        }
+
+        #marginins{
+          margin-left: 25%;
+
+          text-decoration-color:#2699FB ;
+          margin-top: 5%;
+
+        }
+
+
+
+        #tofsgh{margin-left: -103%;
+        margin-top: 0.5%;
+        padding-bottom:  5%;
+
+
+        }
+        #tofsgh1{color: #2699FB;
+        }
+
+        /* css coordonee end*/
+
+        /* css add skils  */
+
+ #numps{
+   text-align: right;
+   left: 65%;
+   color: #989898;
+ }
+ #btnedit{
+   left: 10%;
+ }
+ #btnskills{
+   margin-left: 15%;
+ }
+
+ .close2 {
+     position: absolute;
+     right: 25px;
+     top: 0;
+     color: green;
+     font-size: 35px;
+     font-weight: bold;
+ }
+ .close2:hover,.close2:focus {
+     color: green;
+     cursor: pointer;
+ }
+
+ #modal-wrapperskills{
+   margin: 0 auto;
+   width: 80%;
+   height: 100%;
+   text-align: center;
+   top: 30px;
+   background-color: transparent;
+
+
+ }
+ #rechskills{
+
+   right: 18%;
+ }
 
 #savebtn{
 
- left: 5%;
+  left: 5%;
 }
 
 #skillstitle{
- text-align: left;
+  text-align: left;
 }
 /* hdi tae ckeck box tae addskills */
 
-
-
-.avatar{
-  width:fit-content;
-  position:relative;
-  margin-left: 120%;
-  margin-top: -35%;
+input[type=checkbox] + label {
+  display: block;
+  margin: 0.1em;
+  cursor: pointer;
+  padding: 0.2em;
+  text-align: left;
 }
 
-.avatar-container{
-  cursor:pointer;
-  border-radius:50%;
-  border:#F2EEEE;
-  box-sizing:border-box;
-  overflow:hidden;
-  position:relative;
+input[type=checkbox] {
+  display: none;
+
 }
 
-.avatar-image{
-  border-radius:50%;
-  height:100%;
-  width:auto;
-}
-.avatar-size{
-  width:10rem;
-  height:10rem;
-}
-.edit-container{
-opacity:1;
-transition:opacity 0.2s ease-in-out;
-background-color: #F2EEEE;
-bottom:0;
-height:100%;
-left: 0;
-position: absolute;
-right: 0;
-opacity:0.8;
-text-align:center;
-font-size:200%;
-border-color: red;
-}
-.avatar-container:hover .edit-container{
-  opacity:0.5;
+input[type=checkbox] + label:before {
+  content: "\2714";
+  border: 0.1em solid #000;
+  border-radius: 0.2em;
+  display: inline-block;
+  width: 1em;
+  height: 1.3em;
+  padding-left: 0em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-right: 1em;
+  margin-bottom: 0em;
+  vertical-align: top;
+  color: transparent;
+  transition: .2s;
+
 }
 
+input[type=checkbox] + label:active:before {
+  transform: scale(0);
+}
 
-        /* css tof change */
-      .avatar2{
-        width:fit-content;
-        position:relative;
-        margin-left: 0%;
-        margin-top: 0%;
+input[type=checkbox]:checked + label:before {
+  background-color: MediumSeaGreen;
+  border-color: MediumSeaGreen;
+  color: #fff;
+}
+
+    /* css add skils fad */
+
+    /* css tof de profil */
+     .custom-file input[type="file"]{
+     opacity: 0;
+     width: 104%;
+     height: 398%;
+     top: -263%;
+     cursor:pointer;
+     border-radius:50%;
+     border:1px solid black;
+     box-sizing:border-box;
+     overflow:hidden;
+     position:relative;
+     }
+
+     .changetof input[type="file"]{
+       opacity: 0;
+     }
+
+
+
+   .avatar{
+     width:fit-content;
+     position:relative;
+     margin-left: 60%;
+     margin-top: -25%;
+
+   }
+
+   .avatar-container{
+     cursor:pointer;
+     border-radius:50%;
+     border:#F2EEEE;
+     box-sizing:border-box;
+     overflow:hidden;
+     position:relative;
+   }
+
+   .avatar-image{
+     border-radius:50%;
+     height:100%;
+     width:auto;
+
+   }
+   .avatar-size{
+     width:10rem;
+     height:10rem;
+   }
+   .edit-container{
+   opacity:1;
+   transition:opacity 0.2s ease-in-out;
+   background-color: #F2EEEE;
+   bottom:0;
+   height:100%;
+   left: 0;
+   position: absolute;
+   right: 0;
+   opacity:1;
+   text-align:center;
+   font-size:200%;
+   border-color: red;
+   width: 400px;
+
+
+   }
+   .avatar-container:hover .edit-container {
+     opacity:1;
+   }
+
+   .edit-container{
+   opacity:1;
+   transition:opacity 0.2s ease-in-out;
+   background-color: #F2EEEE;
+   bottom:0;
+   height:100%;
+   left: 0;
+   position: absolute;
+   right: 0;
+   opacity:1;
+   text-align:center;
+   font-size:200%;
+   }
+
+   /* projet profile */
+
+
+     #blah2{
+       opacity: 1;
+       width: 10%;
+       height: 85%;
+       top: 2%;
+       margin-left: -12px;
+       cursor:pointer;
+       box-sizing:border-box;
+       overflow:hidden;
+       position:relative;
+     }
+
+     #titlprjt{
+       text-align: center;
+       font-size: 25px;
+
+
+     }
+
+
+     #prjtxt{
+     margin-top:-70px;
+     margin-left: 40px;
+     }
+
+     #prjtxt2{
+
+
+     color: #989898;
+
+     }
+
+   #txtprjt{
+     text-align: center;
+
+     font-family: Arial, Helvetica, sans-serif;
+   font-size: 13px;
+   letter-spacing: 1px;
+   word-spacing: 6px;
+   color: #000000;
+   font-weight: 100;
+   }
+
+   #JAIME{
+
+   margin-top: -20PX;
+   margin-bottom: 0px;
+
+   }
+
+
+   .rating a {
+      color: #aaa;
+      text-decoration: none;
+      font-size: 1em;
+      transition: color .4s;
+
+   }
+   .rating a:hover,
+   .rating a:focus {
+      color: orange;
+      cursor: pointer;
+   }
+   .rating a:hover ~ a,
+   .rating a:focus ~ a {
+      color: orange;
+   }
+   .rating a {
+      float: right;
+   }
+
+
+
+   .myButton {
+     background-color:transparent;
+     border-radius:17px;
+     display:inline-block;
+     cursor:pointer;
+     color:#050236;
+     font-family:Arial;
+     font-size:15px;
+     font-weight:bold;
+     padding:15px 11px;
+     text-decoration:none;
+   }
+   .myButton:hover {
+     background-color:transparent;
+   }
+   .myButton:active {
+     position:relative;
+     top:1px;
+   }
+   /* css tof de profil end*/
+
+
+
+
+
+
+/* hdo tae page profil */
+
+body{background-color: #E9EBEE;}
+
+
+#avatar-profil{
+right: 57%;
+top:80px;
+opacity: 1;
+
+}
+/* bch jbedt les pubs hdok  */
+#pub11{
+  padding: 0%;
+}
+
+/* tof sghir hdik tae skils  */
+
+#TOFSKILLS{
+  width:25%;
+
+
+}
+#imgcvrt{
+
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-top: -20px;
+
+}
+@media only screen and (min-width: 600px) {
+  #profile-image{
+    margin-bottom: 6.5vw;
+  }
+  
+}
+
+/* bsh drt liste bla n9ati */
+  ol.v {list-style-type: none;}
+
+  #nike{
+  color: #707070;
+  size:5px;
+  }
+
+  /* hdi tof cam f nos tof de profil */
+
+   .fa-camera{
+     color: black;
+     margin-top: 40%
+  }
+
+  /* hdi tae tof li tjibha m pc taek tof de profil bah tji f dwyra */
+
+  #blah{
+    opacity: 1;
+    width: 113%;
+    height: 418%;
+    top: 2%;
+    cursor:pointer;
+    border-radius:50%;
+    border:1px solid black;
+    box-sizing:border-box;
+    overflow:hidden;
+    position:relative;
+  }
+
+
+
+
+
+
+/* hdo tae 3 points hdok  */
+
+
+  .icons li {
+      background: #050236;
+      height: 7px;
+      width: 7px;
+      line-height: 0;
+      list-style: none outside none;
+      margin-right: 5px;
+      margin-top: 3px;
+     vertical-align: top;
+      border-radius:50%;
+      pointer-events: none;
+      float: left;
+
+
+
+  }
+
+  .btn-left {
+      left: 0.4em;
+  }
+
+  .btn-right {
+      right: 0.4em;
+  }
+
+  .btn-left, .btn-right {
+
+      top: 0.24em;
+
+  }
+
+                 .dropbtn {
+                   top:40%;
+                   right: 29%;
+                   position: none;
+
+                     color: white;
+                     font-size: 16px;
+                     border: none;
+                     cursor: pointer;
+                     float: left;
+                     display: inline-block;
+
+                 }
+
+
+      .dropdown {
+        position: absolute;
+        display: block;
+        right: 0.4em;
       }
 
+      .dropdown-content {
+          display:none ;
+          position: relative;
+          margin-top: 30px;
+          background-color: #f9f9f9;
+          min-width: 160px;
+          overflow: auto;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+      }
+
+      .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+      }
+
+      .dropdown a:hover {background-color: #f1f1f1}
+
+      .show {display:block;
+      }
+
+      /* bah jbt les pubs hdok chuia  */
+
+      #pubbb{
+        margin-left: 25px;
+      }
+      /*style tae form tae coordonnees   */
 
 
-          img{
+    #form01{
+      width:50%;
+      height:60%;
 
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
+      top:-3%;
 
-             border-radius: 8px;
-
-             max-height: 100px;
-           max-width: 150px;
-           width: 50px;
-           height:100px;
-          }
+    }
 
 
-      /* css tof de profil */
-        .custom-file input[type="file"]{
-          opacity: 0;
-          width: 104%;
-          height: 259%;
-          top: -202px;
-          max-height: 148px;
-        cursor:pointer;
-        border-radius:50%;
-        border:1px solid black;
-        box-sizing:border-box;
-        overflow:hidden;
-        position:relative;
+
+  /* add skills modal */
+  .profile .card2 {
+    overflow: hidden;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    padding: 12px 15px;
+    background-color: white; }
+    .profile .card2 h3 {
+      font-weight: 600;
+      font-size: 20px;
+      color: #828282;
+      display: inline; }
+    .profile .card2 button {
+      float: right;
+      border: 1px solid #00AEEF;
+      color: #00AEEF;
+      padding: 0 39px;
+      font-size: 14px; }
+    .profile .card2 .skills > div {
+      margin-bottom: 18px;
+      white-space: nowrap; }
+    .profile .card2 .skills i.fas.fa-circle {
+      font-size: 8px;
+      color: #828282;
+      position: relative;
+      top: -1px; }
+    .profile .card2 .skills i.far.fa-times-circle {
+      color: #EB5757;
+      position: relative;
+      top: 1px;
+      cursor: pointer; }
+    .profile .card2 > div {
+      padding-left: 7px;
+      margin-top: 15px; }
+      .profile .card2 > div p {
+        font-size: 15px; }
+
+        .btn-round, nav .sign_btn, .start_now, .become {
+          -webkit-border-radius: 10em !important;
+          border-radius: 10em !important; }
+
+          .secondary-button {
+            border: 1px solid #00AEEF;
+            font-size: 14px;
+            padding: 3px 30px;
+            color: #fff;
+            background-color: #00AEEF; }
+
+            .profile .card2.toEdit .save {
+              float: right;
+              font-size: 14px;
+              margin-left: 15px;
+              padding-top: 0;
+              padding-bottom: 0;
+              color: #fff;
+              height: auto; }
+
+
+
+
+
+
+
+
+
+   @media only screen and (max-width:   956px) {
+     #numps{
+       font-size: 13px;
+      left: 0px;
+     }
+
+
+      #TOFSKILLS{
+        display: none;
+      }
+
+      #svcsl{
+        left:0px;
+        top: 0px;
+         position:relative;
+      }
+
+      #prjtxt{
+      margin-top:-70px;
+      margin-left: 40px;
+      font-size: 1rem;
+      }
+
+      #txtprjt{
+        text-align: center;
+
+        font-family: Arial, Helvetica, sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.5px;
+      word-spacing: 3px;
+      color: #000000;
+      font-weight: 100;
+      }
+      #titlprjt{
+        text-align: center;
+        font-size: 20px;}
+
+        #JAIME{
+          font-size: 0.6rem;
+        }
+     .container2{
+       width: 75%;
+       position: relative;
+       float: left;
+     }
+
+     h3{
+       font-size: 15px;
+     }
+
+     #aedit{
+
+       float:left;
+       right: 30px;
+       width: 30%;
+       font-size: 13px;
+       height: 100%;
+     }
+     #btnskills{
+       width: 90%;
+       padding-left: 0px;
+       float: right;
+     }
+
+
+
+   }
+
+
+      @media only screen and (max-width:   767px) {
+        #cardd{
+          width: 140%;
         }
 
-      .avatar{
-        width:fit-content;
-        position:relative;
-        margin-left: 120%;
-        margin-top: -35%;
-      }
 
-      .avatar-container{
-        cursor:pointer;
-        border-radius:50%;
-        border:#F2EEEE;
-        box-sizing:border-box;
-        overflow:hidden;
-        position:relative;
-      }
+             #pubbb{
+               margin-left: 0px;
+                 display: none;
+               width: 75%;
+             }
 
-      .avatar-image{
-        border-radius:50%;
-        height:100%;
-        width:auto;
-      }
-      .avatar-size{
-        width:10rem;
-        height:10rem;
-      }
-      .edit-container{
-      opacity:1;
-      transition:opacity 0.2s ease-in-out;
-      background-color: #F2EEEE;
-      bottom:0;
-      height:100%;
-      left: 0;
-      position: absolute;
-      right: 0;
-      opacity:0.8;
-      text-align:center;
-      font-size:200%;
-      border-color: red;
-      }
-      .avatar-container:hover .edit-container{
-        opacity:0.5;
-      }
+             .card {
+               margin-bottom: 1.875em;
+               border-radius: 5px;
+               padding: 0;
+               width: 140%;
 
-      #avatar-profil{
-      right: 57%;
-      top:80px;
+
+               }
+
 
       }
-      #blah2{
-        opacity: 1;
-        width: 113%;
-        height: 491%;
-        top: -124%;
-        cursor:pointer;
-        border-radius:50%;
-        border:1px solid black;
-        box-sizing:border-box;
-        overflow:hidden;
-        position:relative;
-        max-height: 159px;
-        max-width: 159px;
-      }
-
-      #modal-wrapperedit{
-        height: 100%;
-        width: 50%;
-       position: relative;
-       left: 25%;
-      }
-
-      /* css tof de profil end*/

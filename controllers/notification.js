@@ -23,7 +23,7 @@ exports.getNotify = (req, res, next) => {
             res.render('project/notification', {
                 path:'/notifications',
                 notifications: notifications,
-                pubs: pubs
+                pubs: pubs,
             })
         })
         })

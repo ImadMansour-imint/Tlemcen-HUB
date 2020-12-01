@@ -76,28 +76,20 @@
                           </div>
                         </div>
                         <hr width="100%" color="#707070"></hr>
-                        <div class="headind_srch">
+                          <div class="headind_srch">
                           <div class="srch_bar">
                             <div class="stylish-input-group">
-                              <input type="text" class="search-bar"  placeholder="Search" >
+                              <!--  <input type="text" class="search-bar"  placeholder="Search" >  -->
                               <span class="input-group-addon">
                               <button type="button"> <i class="fa fa-search" aria-hidden="true"></i> </button>
                               </span> </div>
                           </div>
-                        </div>
+                        </div>  
                         <!-- tae contacte hdi  -->
+                        
                         <div class="inbox_chat">
                           <div id="container"></div>    
                           <div class="chat_list" ></div> 
-                          <div class="chat_list">
-                            <div class="chat_people">
-                              <div class="chat_img"> <img src="/img/92550852_1075202919514395_6362945305440157696_n.jpg" alt="sunil"> </div>
-                              <div class="chat_ib">
-                                <h5>younes <span class="chat_date">User type</span></h5>
-                                <p>ydra  win wslna , Messages..</p>
-                              </div>
-                            </div>
-                          </div>
                           @each(user in  allusers)
                           <div class="chat_list active_chat">
                             <a href="/messenger2/{{name}}?receiver={{user}}&name={{name}}">
@@ -105,6 +97,7 @@
                               <div class="chat_img"> <img src="/img/92550852_1075202919514395_6362945305440157696_n.jpg" alt="sunil"> </div>
                               <div class="chat_ib">
                                 <h5>{{user}}</h5>
+
                               </div>
                             </div>
                             </a>
@@ -120,23 +113,37 @@
                           <div class="chat_people">
                             <div class="chat_img"> <img src="/img/92550852_1075202919514395_6362945305440157696_n.jpg" alt="sunil"> </div>
                             <div class="chat_ib">
-                              <h5>Belambri Samy</h5>
-                              <span class="chat_date">User type</span>
-
+                              <h3>{{receiver || name}}</h3>
                             </div>
                           </div>
                         </div>
                         <br>
                           <hr width="100%" color="#707070" text-align:right;><hr>
                         <div class="msg_history">
-                          <ul id="messages">
-                            <li>hello</li>
-                            <li>monaliza</li>
                             @each(sgmsg in msg)
-                            <li>{{sgmsg.msgFrom}}:{{sgmsg.msg}}</li>
+                            @if(sgmsg.msgFrom==name)
+                            <div class="outgoing_msg">
+                              <div class="sent_msg">
+                                <p>{{sgmsg.msg}}</p>
+                            </div>
+                            </div>
+                            @else
+                            <div class="incoming_msg">
+                              <div class="incoming_msg_img"> <img src="code.jpg" alt="sunil"> </div>
+                              <div class="received_msg" >
+                                <div class="received_withd_msg">
+                                  <p>{{sgmsg.msg}}</p>
+                                </div>
+                            </div>
+                          </div>
+
+                            @endif
                             @endeach
-                          </ul>
-                        </div>
+                            <ul id="messages">
+
+                            </ul>
+                          </div>
+
                         <div class="type_msg">
                           <div class="input_msg_write">
                             <form action=''>
@@ -144,11 +151,10 @@
                               <input id="receiver" type="hidden" value={{receiver}}>
                               <input id="m" type="text" autocomplete='off'>
                               <button class="msg_send_btn1" type="submit"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
-                              <button class="msg_send_btn2" type="button"><i class="fas fa-paperclip" aria-hidden="true"></i></button>
+                              <!--  <button class="msg_send_btn2" type="button"><i class="fas fa-paperclip" aria-hidden="true"></i></button>  -->
                             </form>
                             </div>
                         </div>
-                      </div>
                     </div>
 
 
@@ -239,8 +245,14 @@
           for ( i in users['liste']){
             if (i !== name) {
                 {
-                document.getElementById("container").innerHTML +=  "<a href='/messenger2/"+i+'?receiver='+i+'&name='+name+"'><div class='chat_list active_chat'><div class='chat_people'><div class='chat_img'> <img src='/img/92550852_1075202919514395_6362945305440157696_n.jpg' alt='sunil'> </div><div class='chat_ib'><h5>"+i+"</h5></div></div></div></a>";
-}
+                  document.getElementById("container").innerHTML +=  "<a href='/messenger2/"+i+'?receiver='+i+'&name='+name+"'><div class='chat_list active_chat'><div class='chat_people'><div class='chat_img'> <img src='/img/92550852_1075202919514395_6362945305440157696_n.jpg' alt='sunil'> </div><div class='chat_ib'><div class='online'><i class='fa fa-circle' aria-hidden='true'></i></div><h5>"+i+"</h5></div></div></div></a>";
+
+                  // <div class="online"><i class="fa fa-circle" aria-hidden="true" id="id{{user}}"></i></div>
+                  // document.getElementById("container").innerHTML +=  "<a href='/messenger2/"+i+'?receiver='+i+'&name='+name+"'><div class='chat_list active_chat'><div class='chat_people'><div class='chat_img'> <img src='/img/92550852_1075202919514395_6362945305440157696_n.jpg' alt='sunil'> </div><div class='chat_ib'><h5>"+i+"</h5></div></div></div></a>";
+                  // console.log("id"+i+"");
+                  // document.getElementById("id"+i+"").style.display = "block";
+
+                }
        }
           }
         })    

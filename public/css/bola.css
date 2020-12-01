@@ -13,6 +13,11 @@ body {font-family: Arial, Helvetica, sans-serif;}
  border: 0px solid rgba(0,0,0,.2);
 
 }
+.online{
+float: right;
+color: rgb(36, 167, 36);
+font-size: 13px;
+}
 #myModall{
 border: 0px solid rgba(0,0,0,.2) important!
 }
@@ -194,6 +199,7 @@ img{ max-width:100%;}
   margin: 0;
   padding: 5px 10px 5px 12px;
   width: 100%;
+  margin-bottom: 15px;;
 }
 .time_date {
   color: #747474;
@@ -222,7 +228,7 @@ border-radius: 9px 9px 9px 9px;
   padding: 5px 10px 5px 12px;
   width:100%;
 }
-.outgoing_msg{ overflow:hidden; margin:26px 0 26px;}
+.outgoing_msg{ overflow:hidden; margin:15px 0 15px;}
 .sent_msg {
   float: right;
   width: 46%;
