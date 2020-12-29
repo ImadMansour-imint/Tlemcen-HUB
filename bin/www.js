@@ -7,7 +7,7 @@ var Chat = require('../models/Chat.js')
 var app = require('../app');
 var debug = require('debug')('untitled1:server');
 var http = require('http');
-const { log } = require('console');
+// const { log } = require('console');
 
 
 
@@ -102,10 +102,10 @@ io.on('connection', function(socket){
 
   socket.on('name', function(name){
    names[socket.id]= name;
-   console.log(name + "name");
+  //  console.log(name + "name");
    ids[name] = socket.id;
-   console.log(socket.id + "id");
-   console.log(names[socket.id]);
+  //  console.log(socket.id + "id");
+  //  console.log(names[socket.id]);
       socket.broadcast.emit('users',{ liste: ids });
   });
   socket.on ('receiver', function(receiver){
@@ -121,12 +121,12 @@ io.on('connection', function(socket){
       console.log('user disconnected');
     });
     socket.on('chat message', function(msg){
-        console.log('message: ' + msg);
+        // console.log('message: ' + msg);
 
 
      io.to(ids[receivers[socket.id]]).emit('chat message', names[socket.id] + ':' + msg );
      io.to(socket.id).emit('chat message', 'me: ' + msg );
-     console.log(names[socket.id]);
+    //  console.log(names[socket.id]);
      Chat.create({
       msgFrom:names[socket.id],
        msgTo:receivers[socket.id],

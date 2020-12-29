@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>msgs</title>
+    <title>messages</title>
     <meta name="description" content="Ela Admin - HTML5 Admin Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
@@ -91,21 +91,25 @@
                           <div id="container"></div>    
                           <div class="chat_list" ></div> 
                           @each(user in  allusers)
+ 
+                             
                           <div class="chat_list active_chat">
                             <a href="/messenger2/{{name}}?receiver={{user}}&name={{name}}">
                             <div class="chat_people">
-                              <div class="chat_img"> <img src="/img/92550852_1075202919514395_6362945305440157696_n.jpg" alt="sunil"> </div>
+                              <!--  <div class="chat_img"> <img style="border-radius: 47%;" src={{'/img/92550852_1075202919514395_6362945305440157696_n.jpg'}} alt="sunil" id='{{$loop.index}}un'> </div>  -->
+                              <div class="chat_img"> <img style="border-radius: 47%;" src={{usersP+$loop.index[$loop.index].avatar||'/img/92550852_1075202919514395_6362945305440157696_n.jpg'}} alt="sunil" id={{user}}> </div>
+
                               <div class="chat_ib">
                                 <h5>{{user}}</h5>
-
                               </div>
                             </div>
                             </a>
                           </div>
-                          @endeach
+                        
+                          @endeach    
                         </div>
  
-                      </div>
+                      </div
 
                         <!-- tae duscu hdi  -->
                       <div class="mesgs">
@@ -139,9 +143,8 @@
 
                             @endif
                             @endeach
-                            <ul id="messages">
-
-                            </ul>
+                            <div id="messages">
+                            </div>
                           </div>
 
                         <div class="type_msg">
@@ -163,7 +166,7 @@
           </div>
 
   </div>
-  <!-- hna les pubs adroite -->
+ <!-- hna les pubs adroite -->
 
   <div id="pubbb" class="col-lg -2.5">
      <div class="row">
@@ -187,7 +190,6 @@
        <div class="card">
            <div id="pub11" class="card-body">
              <img   src="img\92728715_247387743066197_1109854106593263616_n.jpg" alt="">
-
            </div>
        </div>
      </div>
@@ -204,18 +206,28 @@
 
 </ul>
 </div>
-
+@each(item in users)
+  <!--  <h3 id='{{$loop.index}}deux'>{{item.avatar||""}}</h3>  -->
+  <h3 id='{{$loop.index}}deux' name={{item.userName}}>{{item.avatar||""}}</h3>
+@endeach
+<h3 id="length"  >{{users.length}}</h3>
 
 <script src='/socketfile/socket.io-1.7.3.js'></script>
 <script src='http://code.jquery.com/jquery-1.11.1.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js'></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" charset="utf-8"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" charset="utf-8"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>    
+        // for (let index = 0; index < obj.length; index++) {
+        //   console.log(document.getElementById(index);
+          
+        // }
+
+
      var name = $('#name').val();
+     console.log(name);
       var receiver = $('#receiver').val();
-      console.log(name);
-      console.log(receiver);
       var socket = io();
   
       socket.emit('name', name);
@@ -228,9 +240,23 @@
         return false;
       });
       socket.on('chat message', function(msg){
-        console.log(msg);
-        $('#messages').append($('<li>').text(msg));
-      });
+        // $('#messages').append($('<li>').text(msg));
+ 
+           var userToknow=msg[0]+msg[1];
+           msgNet = msg.slice(msg.search(':')+1)
+           var div = document.createElement('div');
+           if(userToknow=="me"){
+          div.setAttribute('class', 'outgoing_msg');
+          div.innerHTML = "<div class='sent_msg'><p>"+msgNet+"</p></div>"
+          document.getElementById('messages').appendChild(div);
+           }else{
+          div.setAttribute('class', 'incoming_msg');
+          div.innerHTML = "<div class='incoming_msg_img'> <img src='code.jpg' alt='sunil'> </div><div class='received_msg' ><div class='received_withd_msg'><p>"+msgNet+"</p></div></div>"
+          document.getElementById('messages').appendChild(div);
+  
+           }
+          }
+      );
       ////////////////
       socket.emit('getUsers');
         socket.on('chat message', function(msg){
@@ -238,14 +264,13 @@
           Materialize.toast('You got a message from '+ array[0], 4000);
         })
         socket.on('users', function(users){
-          console.log("got it");
-          console.log(users['liste']);
-          console.log(document.getElementById("users"));
+          // console.log("got it");
+          // console.log(users['liste']);
           document.getElementById("container").innerHTML = '';
           for ( i in users['liste']){
             if (i !== name) {
                 {
-                  document.getElementById("container").innerHTML +=  "<a href='/messenger2/"+i+'?receiver='+i+'&name='+name+"'><div class='chat_list active_chat'><div class='chat_people'><div class='chat_img'> <img src='/img/92550852_1075202919514395_6362945305440157696_n.jpg' alt='sunil'> </div><div class='chat_ib'><div class='online'><i class='fa fa-circle' aria-hidden='true'></i></div><h5>"+i+"</h5></div></div></div></a>";
+                  document.getElementById("container").innerHTML +="<a href='/messenger2/"+i+'?receiver='+i+'&name='+name+"'><div class='chat_list active_chat'><div class='chat_people'><div class='chat_img'> <img src='/img/92550852_1075202919514395_6362945305440157696_n.jpg'alt='sunil'> </div><div class='chat_ib'><div class='online'><i class='fa fa-circle' aria-hidden='true'></i></div><h5>"+i+"</h5></div></div></div></a>";
 
                   // <div class="online"><i class="fa fa-circle" aria-hidden="true" id="id{{user}}"></i></div>
                   // document.getElementById("container").innerHTML +=  "<a href='/messenger2/"+i+'?receiver='+i+'&name='+name+"'><div class='chat_list active_chat'><div class='chat_people'><div class='chat_img'> <img src='/img/92550852_1075202919514395_6362945305440157696_n.jpg' alt='sunil'> </div><div class='chat_ib'><h5>"+i+"</h5></div></div></div></a>";
@@ -255,30 +280,33 @@
                 }
        }
           }
-        })    
- </script>
- <script> 
-//      var socket = io();
-//         var name = $('#name').val();
-//         socket.emit('name', name);
-//         socket.emit('getUsers');
-//         socket.on('chat message', function(msg){
-//           console.log("hrr")
-//           var array = msg.split(':');
-//           Materialize.toast('You got a message from '+ array[0], 4000);
-//         })
-//         socket.on('users', function(users){
-//           console.log("got it");
-//           console.log(users['liste']);
-//           console.log(document.getElementById("users"));
-//           document.getElementById("container").innerHTML = '';
-//           for ( i in users['liste']){
-//             if (i !== name) {
-//                 {
-//                 document.getElementById("container").innerHTML +=  "<a href='/messenger2/"+i+'?receiver='+i+'&name='+name+"'><div class='chat_people'><div class='chat_img'> <img src='/img/92550852_1075202919514395_6362945305440157696_n.jpg' alt='sunil'> </div><div class='chat_ib'><h5>"+i+"</h5></div></div></a>";
+        }) 
+//         var html = document.getElementById("length").innerHTML
+// console.log(html)
+// for (let index = 0; index < html; index++) {
+// var username = document.getElementById(index+"deux").getAttribute("name");
+// var avatar = document.getElementById(index+"deux").innerHTML;
+// var photo = document.getElementById(username).setAttribute("src", avatar||"/img/92550852_1075202919514395_6362945305440157696_n.jpg")
 // }
-//        }
-//           }
-//         })    
-</script> 
+        var html = document.getElementById("length").innerHTML;
+        var obj = [];
+console.log(name);      
+// for (let index = 0; index < html; index++) {
+// var username = document.getElementById(index+"un").getAttribute("id");
+// obj.push(username)
+// }
+var link = "/messenger2"
+console.log(link);
+const options = {
+  method: 'post',
+  url: link,
+  data:"hhhhhh",
+  xsrfCookieName: 'XSRF-TOKEN',
+  xsrfHeaderName: 'X-XSRF-TOKEN',
+};
+
+// send the request
+axios(options);
+ </script>
+
 </body>

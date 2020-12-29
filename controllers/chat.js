@@ -1,13 +1,16 @@
 var express = require('express');
 var router = express.Router();
 const Chat = require('../models/Chat')
+const User = require('../models/Users')
 const sequelize = require('sequelize')
+const axios = require('axios');
+
 const Op = sequelize.Op
 
 
 exports.insertMsg = (req,res)=>{
-  console.log(req.body.msg);
-  console.log(req.session);
+  // console.log(req.body.msg);
+  // console.log(req.session);
   Chat.create({
     msgFrom:req.session.name,
      msgTo:req.query.receiver,
@@ -35,10 +38,21 @@ if(req.query.receiver && req.query.name ){
             if(element.msgTo == req.query.name)
             tab.push(element.msgFrom);
          else tab.push(element.msgTo)
-
         });
         let uniqueTab = [...new Set(tab)];
-   
+        let usersPhoto=[]; 
+        uniqueTab.forEach(element1 => {
+          console.log(element1+"11111");
+           User.findAll({
+            where: {userName: element1},
+          }).then(user=>{
+            usersPhoto.push(user);
+      // console.log(user);
+          })  
+        })
+
+
+
       Chat.findAll({
         where: {
           [Op.or]: [[{msgTo: req.query.receiver}, {msgFrom: req.query.name}],[{msgTo: req.query.name},{msgFrom: req.query.receiver}]],
@@ -50,10 +64,13 @@ if(req.query.receiver && req.query.name ){
           tab2.push(element);
       })
       tabreverse = tab2.reverse()
-      res.render('chat2', {title: "Chat with " + receiver, name:sess.name , receiver: receiver,msg:tabreverse ,allusers:uniqueTab })
-      }   
+      res.render('chat2', {title: "Chat with " + receiver, name:sess.name , receiver: receiver,msg:tabreverse ,allusers:uniqueTab ,users:usersPhoto})
+      }  
+       
 
-  )}).catch(err=>console.log(err))
+  )}).catch(
+    // err=>console.log(err)
+    )
     }
   
   
@@ -66,16 +83,28 @@ if(req.query.receiver && req.query.name ){
     }).then(all =>{
       var tab = [];
         all.forEach(element => {
+          console.log(element);
           if(element.msgTo == req.query.name)
              tab.push(element.msgFrom);
           else tab.push(element.msgTo)
             })
+
+            
             let uniqueTab = [...new Set(tab)];
-            res.render('chat2', {title: "Chat with ", name:sess.name ,allusers:uniqueTab })
+            let usersPhoto=[]; 
+            uniqueTab.forEach(element2 => {
+              console.log(element2+"ZZZZ");
+               User.findAll({where: {userName: element2}}).then(user=>{
+                usersPhoto.push(user[0]);
+              })  
+            })
+            res.render('chat2', {title: "Chat with " + receiver, name:sess.name ,allusers:uniqueTab ,users:usersPhoto})
 
 
 
-  }).catch(err=>console.log(err))
+  }).catch(
+    // err=>console.log(err)
+    )
   // res.render('chat2', {title: "Chat with " + receiver, name:sess.name , receiver: receiver})
 
 };
@@ -83,7 +112,7 @@ if(req.query.receiver && req.query.name ){
 exports.userMsg = (req, res, next) => {
   var sess = req.session;
   sess.name = req.query.name;
-  console.log(req.session._id);
+  // console.log(req.session._id);
   sess.save();
   res.render('users2', {title: "Connected users", name: sess.name});
 
@@ -100,6 +129,17 @@ exports.welcomeMsg  = (req, res, next) => {
   // else res.render('users2', {title: "Connected users", name: sess.name});
 
 };
+
+  axios.post('/messenger2')
+  .then(function (response) {
+    // handle success
+    console.log(response);
+  })
+  .catch(function (error) {
+    // handle error
+    console.log(error);
+  })
+
 
 /* Enter chat room with "name" */
 //  exports.chatMsg =  (req, res, next) => {
